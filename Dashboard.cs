@@ -85,5 +85,63 @@ namespace Boutique_Publisher
             ProcessOrder orders = new ProcessOrder();
             orders.Show();
         }
+
+        private void manageFormats_Click(object sender, EventArgs e)
+        {
+            Formats formats = new Formats();
+                        formats.Show();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to reset the database?",
+                    "Warning",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                    return;
+
+                SqlConnection con =
+                    new SqlConnection(DatabaseHelper.ConnectionString);
+
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand(@"
+
+        DELETE FROM AUTHOR_BOOK;
+        DELETE FROM [ORDER];
+        DELETE FROM FORMAT;
+        DELETE FROM RETAILPARTNER;
+        DELETE FROM BOOK;
+        DELETE FROM AUTHOR;
+
+        DBCC CHECKIDENT ('AUTHOR', RESEED, 0);
+        DBCC CHECKIDENT ('FORMAT', RESEED, 0);
+        DBCC CHECKIDENT ('RETAILPARTNER', RESEED, 0);
+        DBCC CHECKIDENT ('ORDER', RESEED, 0);
+
+        ", con);
+
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                MessageBox.Show("Database Reset Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void retailPart_Click(object sender, EventArgs e)
+        {
+            RetailPartners retailPartners = new RetailPartners();
+            retailPartners.Show();
+        }
     }
 }

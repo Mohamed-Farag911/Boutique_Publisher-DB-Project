@@ -97,9 +97,9 @@
             // 
             this.insert.BackColor = System.Drawing.Color.Green;
             this.insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insert.Location = new System.Drawing.Point(52, 255);
+            this.insert.Location = new System.Drawing.Point(52, 277);
             this.insert.Name = "insert";
-            this.insert.Size = new System.Drawing.Size(83, 32);
+            this.insert.Size = new System.Drawing.Size(111, 62);
             this.insert.TabIndex = 4;
             this.insert.Text = "Insert";
             this.insert.UseVisualStyleBackColor = false;
@@ -109,9 +109,9 @@
             // 
             this.update.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update.Location = new System.Drawing.Point(167, 257);
+            this.update.Location = new System.Drawing.Point(190, 275);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(90, 32);
+            this.update.Size = new System.Drawing.Size(108, 68);
             this.update.TabIndex = 5;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             // Delete
             // 
             this.Delete.BackColor = System.Drawing.Color.Red;
-            this.Delete.Location = new System.Drawing.Point(274, 259);
+            this.Delete.Location = new System.Drawing.Point(325, 275);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(62, 28);
+            this.Delete.Size = new System.Drawing.Size(90, 68);
             this.Delete.TabIndex = 6;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             // 
             // Show_Data
             // 
-            this.Show_Data.Location = new System.Drawing.Point(381, 257);
+            this.Show_Data.Location = new System.Drawing.Point(661, 250);
             this.Show_Data.Name = "Show_Data";
             this.Show_Data.Size = new System.Drawing.Size(82, 32);
             this.Show_Data.TabIndex = 7;
@@ -223,9 +223,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(58, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 20);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 1;
-            this.label3.Text = "NAME";
+            this.label3.Text = "Royalty%";
             this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtRoyal

@@ -35,6 +35,10 @@
             this.Book_Lable = new System.Windows.Forms.Label();
             this.btnAssign = new System.Windows.Forms.Button();
             this.dgvAssignments = new System.Windows.Forms.DataGridView();
+            this.AUTHOR_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aUTHORBOOKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boutiquePublisherDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
@@ -43,10 +47,6 @@
             this.aUTHORTableAdapter = new Boutique_Publisher.BoutiquePublisherDBDataSetTableAdapters.AUTHORTableAdapter();
             this.aUTHORBOOKBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aUTHORBOOKBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.AUTHOR_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssignments)).BeginInit();
@@ -105,6 +105,7 @@
             // 
             // dgvAssignments
             // 
+            this.dgvAssignments.BackgroundColor = System.Drawing.SystemColors.GrayText;
             this.dgvAssignments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAssignments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AUTHOR_ID,
@@ -116,6 +117,26 @@
             this.dgvAssignments.Size = new System.Drawing.Size(423, 247);
             this.dgvAssignments.TabIndex = 3;
             this.dgvAssignments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignments_CellContentClick);
+            // 
+            // AUTHOR_ID
+            // 
+            this.AUTHOR_ID.HeaderText = "Author ID";
+            this.AUTHOR_ID.Name = "AUTHOR_ID";
+            // 
+            // AuthorName
+            // 
+            this.AuthorName.HeaderText = "Author Name";
+            this.AuthorName.Name = "AuthorName";
+            // 
+            // ISBN
+            // 
+            this.ISBN.HeaderText = "ISBN";
+            this.ISBN.Name = "ISBN";
+            // 
+            // BookTitle
+            // 
+            this.BookTitle.HeaderText = "Book Title";
+            this.BookTitle.Name = "BookTitle";
             // 
             // aUTHORBOOKBindingSource
             // 
@@ -154,26 +175,6 @@
             // 
             this.aUTHORBOOKBindingSource2.DataMember = "AUTHOR_BOOK";
             this.aUTHORBOOKBindingSource2.DataSource = this.boutiquePublisherDBDataSetBindingSource;
-            // 
-            // AUTHOR_ID
-            // 
-            this.AUTHOR_ID.HeaderText = "Author ID";
-            this.AUTHOR_ID.Name = "AUTHOR_ID";
-            // 
-            // AuthorName
-            // 
-            this.AuthorName.HeaderText = "Author Name";
-            this.AuthorName.Name = "AuthorName";
-            // 
-            // ISBN
-            // 
-            this.ISBN.HeaderText = "ISBN";
-            this.ISBN.Name = "ISBN";
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.HeaderText = "Book Title";
-            this.BookTitle.Name = "BookTitle";
             // 
             // btnDelete
             // 
