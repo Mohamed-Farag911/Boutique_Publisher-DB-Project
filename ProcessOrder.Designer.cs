@@ -51,8 +51,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmbBook = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
+            this.boutiquePublisherDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTHORBOOKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aUTHOR_BOOKTableAdapter = new Boutique_Publisher.BoutiquePublisherDBDataSetTableAdapters.AUTHOR_BOOKTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPartner
@@ -170,6 +177,8 @@
             // dgvOrders
             // 
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvOrders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvOrders.Location = new System.Drawing.Point(3, 270);
             this.dgvOrders.Name = "dgvOrders";
             this.dgvOrders.Size = new System.Drawing.Size(829, 288);
@@ -260,6 +269,25 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // boutiquePublisherDBDataSet
+            // 
+            this.boutiquePublisherDBDataSet.DataSetName = "BoutiquePublisherDBDataSet";
+            this.boutiquePublisherDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // boutiquePublisherDBDataSetBindingSource
+            // 
+            this.boutiquePublisherDBDataSetBindingSource.DataSource = this.boutiquePublisherDBDataSet;
+            this.boutiquePublisherDBDataSetBindingSource.Position = 0;
+            // 
+            // aUTHORBOOKBindingSource
+            // 
+            this.aUTHORBOOKBindingSource.DataMember = "AUTHOR_BOOK";
+            this.aUTHORBOOKBindingSource.DataSource = this.boutiquePublisherDBDataSetBindingSource;
+            // 
+            // aUTHOR_BOOKTableAdapter
+            // 
+            this.aUTHOR_BOOKTableAdapter.ClearBeforeFill = true;
+            // 
             // ProcessOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +319,9 @@
             this.Load += new System.EventHandler(this.ProcessOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +351,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbBook;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.BindingSource boutiquePublisherDBDataSetBindingSource;
+        private BoutiquePublisherDBDataSet boutiquePublisherDBDataSet;
+        private System.Windows.Forms.BindingSource aUTHORBOOKBindingSource;
+        private BoutiquePublisherDBDataSetTableAdapters.AUTHOR_BOOKTableAdapter aUTHOR_BOOKTableAdapter;
     }
 }

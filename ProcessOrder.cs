@@ -22,6 +22,7 @@ namespace Boutique_Publisher
         // =========================================
         private void ProcessOrder_Load(object sender, EventArgs e)
         {
+           
             LoadPartners();
             LoadBooks();
             LoadOrders();
@@ -46,11 +47,10 @@ namespace Boutique_Publisher
 
             lblTotalPrice.Text = "0.00";
 
-            // التاريخ
+          
             lblDate.Text =
                 DateTime.Now.ToShortDateString();
 
-            // تشغيل الوقت
             timer1.Start();
         }
 
@@ -311,7 +311,7 @@ namespace Boutique_Publisher
 
             dgvOrders.DataSource = dt;
         }
-       
+
 
         // =========================================
         // GRID CLICK
@@ -328,6 +328,8 @@ namespace Boutique_Publisher
 
                 cmbPartner.Text =
                     row.Cells[1].Value.ToString();
+                cmbBook.Text =
+                    row.Cells[2].Value.ToString();
 
                 cmbFormat.Text =
                     row.Cells[3].Value.ToString();
