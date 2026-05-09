@@ -12,3 +12,17 @@ C:\Users\Mohamed Farag\source\repos\Boutique_Publisher\obj\Debug\Boutique_Publis
 C:\Users\Mohamed Farag\source\repos\Boutique_Publisher\obj\Debug\Boutique_Publisher.ProcessOrder.resources
 C:\Users\Mohamed Farag\source\repos\Boutique_Publisher\obj\Debug\Boutique_Publisher.Author.resources
 C:\Users\Mohamed Farag\source\repos\Boutique_Publisher\obj\Debug\Boutique_Publisher.Books.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.csproj.AssemblyReference.cache
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.AssignBookAuthor.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.Books.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.Dashboard.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.Author.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.ProcessOrder.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.Properties.Resources.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.csproj.GenerateResource.cache
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.exe
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.pdb
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\bin\Debug\Boutique_Publisher.exe.config
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\bin\Debug\Boutique_Publisher.exe
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\bin\Debug\Boutique_Publisher.pdb

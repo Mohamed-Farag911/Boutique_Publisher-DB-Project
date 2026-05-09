@@ -17,6 +17,7 @@ namespace Boutique_Publisher
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Author());
+            //Application.Run(new Dashboard());
             //Application.Run(new Books());
             //Application.Run(new AssignBookAuthor());
         }

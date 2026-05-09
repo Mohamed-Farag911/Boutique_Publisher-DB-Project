@@ -148,7 +148,7 @@
             this.bIOGRAPHYDataGridViewTextBoxColumn,
             this.rOYALTYPERCENTAGEDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.aUTHORBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(300, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(300, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 218);
             this.dataGridView1.TabIndex = 8;

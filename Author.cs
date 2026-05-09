@@ -18,43 +18,37 @@ namespace Boutique_Publisher
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'boutiquePublisherDBDataSet.AUTHOR' table. You can move, or remove it, as needed.
-            
-            SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Show_Data_Click(object sender, EventArgs e)
-        {
-            this.aUTHORTableAdapter.Fill(this.boutiquePublisherDBDataSet.AUTHOR);
-        }
-
-        private void insert_Click(object sender, EventArgs e)
+        private void LoadAuthors()
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                SqlConnection connection =
+                    new SqlConnection(DatabaseHelper.ConnectionString);
 
                 connection.Open();
 
-                SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO AUTHOR (NAME) VALUES (@NAME);" ,
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT * FROM AUTHOR",
                     connection);
 
-                cmd.Parameters.AddWithValue("@NAME", txtName.Text);
+                DataTable dt = new DataTable();
 
-                cmd.ExecuteNonQuery();
+                da.Fill(dt);
+
+                dataGridView1.DataSource = dt;
 
                 connection.Close();
 
-                MessageBox.Show("Inserted Successfully");
+                // Grid Style
+                dataGridView1.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.Fill;
+
+                dataGridView1.SelectionMode =
+                    DataGridViewSelectionMode.FullRowSelect;
+
+                dataGridView1.MultiSelect = false;
+
+                dataGridView1.ReadOnly = true;
             }
             catch (Exception ex)
             {
@@ -62,26 +56,167 @@ namespace Boutique_Publisher
             }
         }
 
-        private void update_Click(object sender, EventArgs e)
+        // =========================
+        // VALIDATION
+        // =========================
+
+        private bool ValidateInputs()
+        {
+            // Name Required
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Author name is required");
+                txtName.Focus();
+                return false;
+            }
+
+            // Royalty Validation
+            if (!string.IsNullOrWhiteSpace(txtRoyal.Text))
+            {
+                decimal royalty;
+
+                if (!decimal.TryParse(txtRoyal.Text, out royalty))
+                {
+                    MessageBox.Show("Royalty must be numeric");
+                    txtRoyal.Focus();
+                    return false;
+                }
+
+                if (royalty < 0 || royalty > 100)
+                {
+                    MessageBox.Show("Royalty must be between 0 and 100");
+                    txtRoyal.Focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadAuthors();
+
+            // ID readonly
+            A_ID.ReadOnly = true;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // =========================
+        // SHOW DATA BUTTON
+        // =========================
+
+        private void Show_Data_Click(object sender, EventArgs e)
+        {
+            LoadAuthors();
+        }
+
+        private void insert_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                if (!ValidateInputs())
+                    return;
+
+                SqlConnection connection =
+                    new SqlConnection(DatabaseHelper.ConnectionString);
 
                 connection.Open();
 
                 SqlCommand cmd = new SqlCommand(
-                    "UPDATE AUTHOR SET NAME = @NAME WHERE AUTHOR_ID = @ID",
+                    @"INSERT INTO AUTHOR
+                    (NAME, BIOGRAPHY, ROYALTY_PERCENTAGE)
+                    VALUES
+                    (@NAME, @BIOGRAPHY, @ROYALTY)",
                     connection);
 
                 cmd.Parameters.AddWithValue("@NAME", txtName.Text);
+                cmd.Parameters.AddWithValue("@BIOGRAPHY", txtBio.Text);
+
+                // Royalty Nullable
+                if (string.IsNullOrWhiteSpace(txtRoyal.Text))
+                {
+                    cmd.Parameters.AddWithValue("@ROYALTY", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue(
+                        "@ROYALTY",
+                        decimal.Parse(txtRoyal.Text));
+                }
+
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("Inserted Successfully");
+
+                LoadAuthors();
+
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(A_ID.Text))
+                {
+                    MessageBox.Show("Select author first");
+                    return;
+                }
+
+                if (!ValidateInputs())
+                    return;
+
+                SqlConnection connection =
+                    new SqlConnection(DatabaseHelper.ConnectionString);
+
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand(
+                    @"UPDATE AUTHOR
+                    SET
+                    NAME = @NAME,
+                    BIOGRAPHY = @BIOGRAPHY,
+                    ROYALTY_PERCENTAGE = @ROYALTY
+                    WHERE AUTHOR_ID = @ID",
+                    connection);
+
                 cmd.Parameters.AddWithValue("@ID", A_ID.Text);
+                cmd.Parameters.AddWithValue("@NAME", txtName.Text);
+                cmd.Parameters.AddWithValue("@BIOGRAPHY", txtBio.Text);
+
+                if (string.IsNullOrWhiteSpace(txtRoyal.Text))
+                {
+                    cmd.Parameters.AddWithValue("@ROYALTY", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue(
+                        "@ROYALTY",
+                        decimal.Parse(txtRoyal.Text));
+                }
 
                 cmd.ExecuteNonQuery();
 
                 connection.Close();
 
                 MessageBox.Show("Updated Successfully");
+
+                LoadAuthors();
+
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -91,9 +226,25 @@ namespace Boutique_Publisher
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                if (string.IsNullOrWhiteSpace(A_ID.Text))
+                {
+                    MessageBox.Show("Select author first");
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to delete this author?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                    return;
+
+                SqlConnection connection =
+                    new SqlConnection(DatabaseHelper.ConnectionString);
 
                 connection.Open();
 
@@ -108,6 +259,10 @@ namespace Boutique_Publisher
                 connection.Close();
 
                 MessageBox.Show("Deleted Successfully");
+
+                LoadAuthors();
+
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -128,6 +283,19 @@ namespace Boutique_Publisher
             }
 
         }
+
+        // =========================
+        // CLEAR
+        // =========================
+
+        private void ClearFields()
+        {
+            A_ID.Clear();
+            txtName.Clear();
+            txtBio.Clear();
+            txtRoyal.Clear();
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
