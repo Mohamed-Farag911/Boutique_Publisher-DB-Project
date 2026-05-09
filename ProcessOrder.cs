@@ -16,5 +16,10 @@ namespace Boutique_Publisher
         {
             InitializeComponent();
         }
+
+        private void ProcessOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

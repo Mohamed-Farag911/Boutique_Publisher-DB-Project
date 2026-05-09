@@ -35,22 +35,24 @@
             this.Book_Lable = new System.Windows.Forms.Label();
             this.btnAssign = new System.Windows.Forms.Button();
             this.dgvAssignments = new System.Windows.Forms.DataGridView();
-            this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
-            this.boutiquePublisherDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aUTHORBOOKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boutiquePublisherDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
             this.aUTHOR_BOOKTableAdapter = new Boutique_Publisher.BoutiquePublisherDBDataSetTableAdapters.AUTHOR_BOOKTableAdapter();
             this.aUTHORBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aUTHORTableAdapter = new Boutique_Publisher.BoutiquePublisherDBDataSetTableAdapters.AUTHORTableAdapter();
             this.aUTHORBOOKBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aUTHORBOOKBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.Author_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Author_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AUTHOR_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Book_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssignments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource2)).BeginInit();
@@ -93,42 +95,42 @@
             // 
             // btnAssign
             // 
-            this.btnAssign.Location = new System.Drawing.Point(98, 184);
+            this.btnAssign.Location = new System.Drawing.Point(48, 184);
             this.btnAssign.Name = "btnAssign";
             this.btnAssign.Size = new System.Drawing.Size(75, 23);
             this.btnAssign.TabIndex = 2;
             this.btnAssign.Text = "Assign";
             this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click_1);
             // 
             // dgvAssignments
             // 
-            this.dgvAssignments.AutoGenerateColumns = false;
             this.dgvAssignments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAssignments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Author_ID,
-            this.Author_Name,
+            this.AUTHOR_ID,
+            this.AuthorName,
             this.ISBN,
-            this.Book_Title});
-            this.dgvAssignments.DataSource = this.aUTHORBOOKBindingSource;
+            this.BookTitle});
             this.dgvAssignments.Location = new System.Drawing.Point(333, 68);
             this.dgvAssignments.Name = "dgvAssignments";
             this.dgvAssignments.Size = new System.Drawing.Size(423, 247);
             this.dgvAssignments.TabIndex = 3;
+            this.dgvAssignments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignments_CellContentClick);
             // 
-            // boutiquePublisherDBDataSet
+            // aUTHORBOOKBindingSource
             // 
-            this.boutiquePublisherDBDataSet.DataSetName = "BoutiquePublisherDBDataSet";
-            this.boutiquePublisherDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.aUTHORBOOKBindingSource.DataMember = "AUTHOR_BOOK";
+            this.aUTHORBOOKBindingSource.DataSource = this.boutiquePublisherDBDataSetBindingSource;
             // 
             // boutiquePublisherDBDataSetBindingSource
             // 
             this.boutiquePublisherDBDataSetBindingSource.DataSource = this.boutiquePublisherDBDataSet;
             this.boutiquePublisherDBDataSetBindingSource.Position = 0;
             // 
-            // aUTHORBOOKBindingSource
+            // boutiquePublisherDBDataSet
             // 
-            this.aUTHORBOOKBindingSource.DataMember = "AUTHOR_BOOK";
-            this.aUTHORBOOKBindingSource.DataSource = this.boutiquePublisherDBDataSetBindingSource;
+            this.boutiquePublisherDBDataSet.DataSetName = "BoutiquePublisherDBDataSet";
+            this.boutiquePublisherDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // aUTHOR_BOOKTableAdapter
             // 
@@ -153,31 +155,53 @@
             this.aUTHORBOOKBindingSource2.DataMember = "AUTHOR_BOOK";
             this.aUTHORBOOKBindingSource2.DataSource = this.boutiquePublisherDBDataSetBindingSource;
             // 
-            // Author_ID
+            // AUTHOR_ID
             // 
-            this.Author_ID.HeaderText = "Author ID";
-            this.Author_ID.Name = "Author_ID";
+            this.AUTHOR_ID.HeaderText = "Author ID";
+            this.AUTHOR_ID.Name = "AUTHOR_ID";
             // 
-            // Author_Name
+            // AuthorName
             // 
-            this.Author_Name.HeaderText = "Author Name";
-            this.Author_Name.Name = "Author_Name";
+            this.AuthorName.HeaderText = "Author Name";
+            this.AuthorName.Name = "AuthorName";
             // 
             // ISBN
             // 
             this.ISBN.HeaderText = "ISBN";
             this.ISBN.Name = "ISBN";
             // 
-            // Book_Title
+            // BookTitle
             // 
-            this.Book_Title.HeaderText = "Book Title";
-            this.Book_Title.Name = "Book_Title";
+            this.BookTitle.HeaderText = "Book Title";
+            this.BookTitle.Name = "BookTitle";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(234, 184);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(142, 184);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // AssignBookAuthor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvAssignments);
             this.Controls.Add(this.btnAssign);
             this.Controls.Add(this.Book_Lable);
@@ -188,9 +212,9 @@
             this.Text = "AssignBookAuthor";
             this.Load += new System.EventHandler(this.AssignBookAuthor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAssignments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBOOKBindingSource2)).EndInit();
@@ -213,11 +237,13 @@
         private BoutiquePublisherDBDataSetTableAdapters.AUTHOR_BOOKTableAdapter aUTHOR_BOOKTableAdapter;
         private System.Windows.Forms.BindingSource aUTHORBindingSource;
         private BoutiquePublisherDBDataSetTableAdapters.AUTHORTableAdapter aUTHORTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Author_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Author_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Book_Title;
         private System.Windows.Forms.BindingSource aUTHORBOOKBindingSource1;
         private System.Windows.Forms.BindingSource aUTHORBOOKBindingSource2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AUTHOR_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

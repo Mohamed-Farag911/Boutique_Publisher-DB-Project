@@ -40,15 +40,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblTotalPartners = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.manageFormats = new System.Windows.Forms.Button();
             this.mangeBooks = new System.Windows.Forms.Button();
-            this.manageAuth = new System.Windows.Forms.Button();
-            this.retailPart = new System.Windows.Forms.Button();
-            this.processOrders = new System.Windows.Forms.Button();
             this.royaltyReports = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.processOrders = new System.Windows.Forms.Button();
+            this.retailPart = new System.Windows.Forms.Button();
             this.assignAuthors = new System.Windows.Forms.Button();
+            this.manageAuth = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -164,6 +164,15 @@
             this.lblTotalPartners.TabIndex = 0;
             this.lblTotalPartners.Text = "label1";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Total Partners";
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.manageFormats);
@@ -195,33 +204,7 @@
             this.mangeBooks.TabIndex = 0;
             this.mangeBooks.Text = "Manage Books\n";
             this.mangeBooks.UseVisualStyleBackColor = true;
-            // 
-            // manageAuth
-            // 
-            this.manageAuth.Location = new System.Drawing.Point(12, 23);
-            this.manageAuth.Name = "manageAuth";
-            this.manageAuth.Size = new System.Drawing.Size(160, 68);
-            this.manageAuth.TabIndex = 0;
-            this.manageAuth.Text = "Manage Authors";
-            this.manageAuth.UseVisualStyleBackColor = true;
-            // 
-            // retailPart
-            // 
-            this.retailPart.Location = new System.Drawing.Point(239, 125);
-            this.retailPart.Name = "retailPart";
-            this.retailPart.Size = new System.Drawing.Size(160, 68);
-            this.retailPart.TabIndex = 0;
-            this.retailPart.Text = "Retail Partners\n";
-            this.retailPart.UseVisualStyleBackColor = true;
-            // 
-            // processOrders
-            // 
-            this.processOrders.Location = new System.Drawing.Point(457, 125);
-            this.processOrders.Name = "processOrders";
-            this.processOrders.Size = new System.Drawing.Size(160, 68);
-            this.processOrders.TabIndex = 0;
-            this.processOrders.Text = "Process Orders";
-            this.processOrders.UseVisualStyleBackColor = true;
+            this.mangeBooks.Click += new System.EventHandler(this.mangeBooks_Click);
             // 
             // royaltyReports
             // 
@@ -232,14 +215,24 @@
             this.royaltyReports.Text = "Royalty Reports";
             this.royaltyReports.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // processOrders
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Total Partners";
+            this.processOrders.Location = new System.Drawing.Point(457, 125);
+            this.processOrders.Name = "processOrders";
+            this.processOrders.Size = new System.Drawing.Size(160, 68);
+            this.processOrders.TabIndex = 0;
+            this.processOrders.Text = "Process Orders";
+            this.processOrders.UseVisualStyleBackColor = true;
+            this.processOrders.Click += new System.EventHandler(this.processOrders_Click);
+            // 
+            // retailPart
+            // 
+            this.retailPart.Location = new System.Drawing.Point(239, 125);
+            this.retailPart.Name = "retailPart";
+            this.retailPart.Size = new System.Drawing.Size(160, 68);
+            this.retailPart.TabIndex = 0;
+            this.retailPart.Text = "Retail Partners\n";
+            this.retailPart.UseVisualStyleBackColor = true;
             // 
             // assignAuthors
             // 
@@ -250,6 +243,16 @@
             this.assignAuthors.Text = "Assign Authors";
             this.assignAuthors.UseVisualStyleBackColor = true;
             this.assignAuthors.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // manageAuth
+            // 
+            this.manageAuth.Location = new System.Drawing.Point(12, 23);
+            this.manageAuth.Name = "manageAuth";
+            this.manageAuth.Size = new System.Drawing.Size(160, 68);
+            this.manageAuth.TabIndex = 0;
+            this.manageAuth.Text = "Manage Authors";
+            this.manageAuth.UseVisualStyleBackColor = true;
+            this.manageAuth.Click += new System.EventHandler(this.manageAuth_Click);
             // 
             // Dashboard
             // 

@@ -122,6 +122,7 @@
             this.Controls.Add(this.cmbBooks);
             this.Name = "ProcessOrder";
             this.Text = "ProcessOrder";
+            this.Load += new System.EventHandler(this.ProcessOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

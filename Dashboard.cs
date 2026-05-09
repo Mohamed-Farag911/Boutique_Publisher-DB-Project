@@ -20,7 +20,8 @@ namespace Boutique_Publisher
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            AssignBookAuthor form = new AssignBookAuthor();
+            form.Show();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -63,6 +64,24 @@ namespace Boutique_Publisher
                 cmdPartners.ExecuteScalar().ToString();
 
             con.Close();
+        }
+
+        private void manageAuth_Click(object sender, EventArgs e)
+        {
+            Author form = new Author();
+            form.Show();
+        }
+
+        private void mangeBooks_Click(object sender, EventArgs e)
+        {
+            Books books = new Books();
+            books.Show();
+        }
+
+        private void processOrders_Click(object sender, EventArgs e)
+        {
+            ProcessOrder orders = new ProcessOrder();
+            orders.Show();
         }
     }
 }
