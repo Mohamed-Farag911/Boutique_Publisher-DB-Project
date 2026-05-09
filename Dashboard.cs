@@ -16,6 +16,7 @@ namespace Boutique_Publisher
         public Dashboard()
         {
             InitializeComponent();
+            this.Activated += Dashboard_Activated;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,7 +25,8 @@ namespace Boutique_Publisher
             form.Show();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+       
+        private void Dashboard_Activated(object sender, EventArgs e)
         {
             LoadStatistics();
         }
