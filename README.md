@@ -171,7 +171,7 @@ Boutique_Publisher.sln
 Open SQL Server Management Studio and execute the provided SQL script:
 
 ```text
-BoutiquePublisherDB.sql
+\Boutique_Publisher-DB-Project\SQL Database\Boutique_Publisher.sql
 ```
 
 This script will:
