@@ -187,9 +187,9 @@ This script will:
 
 Open:
 
-```text
-App.config
-```
+
+App.config 
+
 
 Update the SQL Server instance name if needed:
 
@@ -201,6 +201,11 @@ Update the SQL Server instance name if needed:
 </connectionStrings>
 ```
 
+ DataBaseHelper.cs
+
+```xml
+ public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
+```
 ### Important
 
 Replace:
