@@ -143,5 +143,41 @@ namespace Boutique_Publisher
             RetailPartners retailPartners = new RetailPartners();
             retailPartners.Show();
         }
+
+        private void royaltyReports_Click(object sender, EventArgs e)
+        {
+            RoyaltyReport royaltyReport = new RoyaltyReport();
+            royaltyReport.Show();
+        }
+
+        
+
+       
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            ProcessOrder orders = new ProcessOrder();
+            orders.Show();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            Books books = new Books();
+            books.Show();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            Author form = new Author();
+            form.Show();
+        }
+
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            RetailPartners retailPartners = new RetailPartners();
+            retailPartners.Show();
+        }
+
+        
     }
 }

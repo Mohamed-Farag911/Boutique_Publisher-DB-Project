@@ -49,11 +49,12 @@
             this.lable2 = new System.Windows.Forms.Label();
             this.txtBio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtRoyal = new System.Windows.Forms.TextBox();
+            this.numRoyalty = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRoyalty)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -228,19 +229,25 @@
             this.label3.Text = "Royalty%";
             this.label3.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtRoyal
+            // numRoyalty
             // 
-            this.txtRoyal.Enabled = false;
-            this.txtRoyal.Location = new System.Drawing.Point(157, 224);
-            this.txtRoyal.Name = "txtRoyal";
-            this.txtRoyal.Size = new System.Drawing.Size(82, 20);
-            this.txtRoyal.TabIndex = 2;
+            this.numRoyalty.DecimalPlaces = 2;
+            this.numRoyalty.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.numRoyalty.Location = new System.Drawing.Point(139, 224);
+            this.numRoyalty.Name = "numRoyalty";
+            this.numRoyalty.Size = new System.Drawing.Size(50, 20);
+            this.numRoyalty.TabIndex = 9;
             // 
             // Author
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numRoyalty);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Show_Data);
             this.Controls.Add(this.Delete);
@@ -248,7 +255,6 @@
             this.Controls.Add(this.insert);
             this.Controls.Add(this.txtBio);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtRoyal);
             this.Controls.Add(this.A_ID);
             this.Controls.Add(this.lable2);
             this.Controls.Add(this.label3);
@@ -261,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRoyalty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +295,7 @@
         private System.Windows.Forms.Label lable2;
         private System.Windows.Forms.TextBox txtBio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtRoyal;
+        private System.Windows.Forms.NumericUpDown numRoyalty;
     }
 }
 

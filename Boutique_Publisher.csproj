@@ -99,6 +99,12 @@
     <Compile Include="RetailPartners.Designer.cs">
       <DependentUpon>RetailPartners.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoyaltyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoyaltyReport.Designer.cs">
+      <DependentUpon>RoyaltyReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssignBookAuthor.resx">
       <DependentUpon>AssignBookAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="RetailPartners.resx">
       <DependentUpon>RetailPartners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoyaltyReport.resx">
+      <DependentUpon>RoyaltyReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BoutiquePublisherDBDataSet.xsc">
       <DependentUpon>BoutiquePublisherDBDataSet.xsd</DependentUpon>
@@ -177,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ICONS\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\refresh-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

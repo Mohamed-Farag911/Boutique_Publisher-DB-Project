@@ -71,24 +71,16 @@ namespace Boutique_Publisher
             }
 
             // Royalty Validation
-            if (!string.IsNullOrWhiteSpace(txtRoyal.Text))
+
+            decimal royalty;
+
+            if (numRoyalty.Value < 0 || numRoyalty.Value > 100)
             {
-                decimal royalty;
-
-                if (!decimal.TryParse(txtRoyal.Text, out royalty))
-                {
-                    MessageBox.Show("Royalty must be numeric");
-                    txtRoyal.Focus();
-                    return false;
-                }
-
-                if (royalty < 0 || royalty > 100)
-                {
-                    MessageBox.Show("Royalty must be between 0 and 100");
-                    txtRoyal.Focus();
-                    return false;
-                }
+                MessageBox.Show("Royalty must be between 0 and 100");
+                numRoyalty.Focus();
+                return false;
             }
+
 
             return true;
         }
@@ -136,18 +128,7 @@ namespace Boutique_Publisher
 
                 cmd.Parameters.AddWithValue("@NAME", txtName.Text);
                 cmd.Parameters.AddWithValue("@BIOGRAPHY", txtBio.Text);
-
-                // Royalty Nullable
-                if (string.IsNullOrWhiteSpace(txtRoyal.Text))
-                {
-                    cmd.Parameters.AddWithValue("@ROYALTY", DBNull.Value);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue(
-                        "@ROYALTY",
-                        decimal.Parse(txtRoyal.Text));
-                }
+                cmd.Parameters.AddWithValue("@ROYALTY", numRoyalty.Value);
 
                 cmd.ExecuteNonQuery();
 
@@ -163,7 +144,7 @@ namespace Boutique_Publisher
             {
                 MessageBox.Show(ex.Message);
             }
-        
+
         }
 
         private void update_Click(object sender, EventArgs e)
@@ -197,16 +178,7 @@ namespace Boutique_Publisher
                 cmd.Parameters.AddWithValue("@NAME", txtName.Text);
                 cmd.Parameters.AddWithValue("@BIOGRAPHY", txtBio.Text);
 
-                if (string.IsNullOrWhiteSpace(txtRoyal.Text))
-                {
-                    cmd.Parameters.AddWithValue("@ROYALTY", DBNull.Value);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue(
-                        "@ROYALTY",
-                        decimal.Parse(txtRoyal.Text));
-                }
+                cmd.Parameters.AddWithValue("@ROYALTY", numRoyalty.Value);
 
                 cmd.ExecuteNonQuery();
 
@@ -226,7 +198,7 @@ namespace Boutique_Publisher
 
         private void Delete_Click(object sender, EventArgs e)
         {
-             try
+            try
             {
                 if (string.IsNullOrWhiteSpace(A_ID.Text))
                 {
@@ -279,7 +251,14 @@ namespace Boutique_Publisher
                 A_ID.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtBio.Text = row.Cells[2].Value.ToString();
-                txtRoyal.Text = row.Cells[3].Value.ToString();
+                if (row.Cells[3].Value != DBNull.Value && row.Cells[3].Value != null)
+                {
+                    numRoyalty.Value = Convert.ToDecimal(row.Cells[3].Value);
+                }
+                else
+                {
+                    numRoyalty.Value = 0;
+                }
             }
 
         }
@@ -293,7 +272,7 @@ namespace Boutique_Publisher
             A_ID.Clear();
             txtName.Clear();
             txtBio.Clear();
-            txtRoyal.Clear();
+            numRoyalty.Value = 0;
         }
 
 

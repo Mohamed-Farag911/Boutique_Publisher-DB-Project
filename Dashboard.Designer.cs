@@ -42,27 +42,26 @@
             this.lblTotalPartners = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.manageFormats = new System.Windows.Forms.Button();
-            this.mangeBooks = new System.Windows.Forms.Button();
-            this.royaltyReports = new System.Windows.Forms.Button();
-            this.processOrders = new System.Windows.Forms.Button();
-            this.retailPart = new System.Windows.Forms.Button();
-            this.assignAuthors = new System.Windows.Forms.Button();
-            this.manageAuth = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.manageAuth = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.manageFormats = new System.Windows.Forms.Button();
+            this.mangeBooks = new System.Windows.Forms.Button();
+            this.royaltyReports = new System.Windows.Forms.Button();
+            this.processOrders = new System.Windows.Forms.Button();
+            this.retailPart = new System.Windows.Forms.Button();
+            this.assignAuthors = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -70,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,10 +88,11 @@
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.lblTotalOrders);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(54, 53);
+            this.panel1.Location = new System.Drawing.Point(44, 71);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 100);
             this.panel1.TabIndex = 1;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // lblTotalOrders
             // 
@@ -119,10 +120,11 @@
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.Controls.Add(this.lblTotalBooks);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(231, 53);
+            this.panel2.Location = new System.Drawing.Point(229, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(156, 100);
             this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // lblTotalBooks
             // 
@@ -150,10 +152,11 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.lblTotalAuthors);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(410, 53);
+            this.panel3.Location = new System.Drawing.Point(410, 71);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(174, 100);
             this.panel3.TabIndex = 1;
+            this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // lblTotalAuthors
             // 
@@ -181,10 +184,11 @@
             this.panel4.BackColor = System.Drawing.Color.DarkViolet;
             this.panel4.Controls.Add(this.lblTotalPartners);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(599, 53);
+            this.panel4.Location = new System.Drawing.Point(599, 71);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(175, 100);
             this.panel4.TabIndex = 1;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // lblTotalPartners
             // 
@@ -227,94 +231,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(682, 377);
             this.panel5.TabIndex = 2;
-            // 
-            // manageFormats
-            // 
-            this.manageFormats.BackColor = System.Drawing.Color.White;
-            this.manageFormats.Location = new System.Drawing.Point(382, 97);
-            this.manageFormats.Name = "manageFormats";
-            this.manageFormats.Size = new System.Drawing.Size(111, 32);
-            this.manageFormats.TabIndex = 0;
-            this.manageFormats.Text = "Manage Formats";
-            this.manageFormats.UseVisualStyleBackColor = false;
-            this.manageFormats.Click += new System.EventHandler(this.manageFormats_Click);
-            // 
-            // mangeBooks
-            // 
-            this.mangeBooks.BackColor = System.Drawing.Color.White;
-            this.mangeBooks.Location = new System.Drawing.Point(202, 97);
-            this.mangeBooks.Name = "mangeBooks";
-            this.mangeBooks.Size = new System.Drawing.Size(120, 29);
-            this.mangeBooks.TabIndex = 0;
-            this.mangeBooks.Text = "Manage Books\n";
-            this.mangeBooks.UseVisualStyleBackColor = false;
-            this.mangeBooks.Click += new System.EventHandler(this.mangeBooks_Click);
-            // 
-            // royaltyReports
-            // 
-            this.royaltyReports.BackColor = System.Drawing.Color.White;
-            this.royaltyReports.Location = new System.Drawing.Point(373, 272);
-            this.royaltyReports.Name = "royaltyReports";
-            this.royaltyReports.Size = new System.Drawing.Size(119, 32);
-            this.royaltyReports.TabIndex = 0;
-            this.royaltyReports.Text = "Royalty Reports";
-            this.royaltyReports.UseVisualStyleBackColor = false;
-            // 
-            // processOrders
-            // 
-            this.processOrders.BackColor = System.Drawing.Color.White;
-            this.processOrders.Location = new System.Drawing.Point(193, 272);
-            this.processOrders.Name = "processOrders";
-            this.processOrders.Size = new System.Drawing.Size(133, 38);
-            this.processOrders.TabIndex = 0;
-            this.processOrders.Text = "Process Orders";
-            this.processOrders.UseVisualStyleBackColor = false;
-            this.processOrders.Click += new System.EventHandler(this.processOrders_Click);
-            // 
-            // retailPart
-            // 
-            this.retailPart.BackColor = System.Drawing.Color.White;
-            this.retailPart.Location = new System.Drawing.Point(28, 272);
-            this.retailPart.Name = "retailPart";
-            this.retailPart.Size = new System.Drawing.Size(130, 38);
-            this.retailPart.TabIndex = 0;
-            this.retailPart.Text = "Retail Partners\n";
-            this.retailPart.UseVisualStyleBackColor = false;
-            this.retailPart.Click += new System.EventHandler(this.retailPart_Click);
-            // 
-            // assignAuthors
-            // 
-            this.assignAuthors.BackColor = System.Drawing.Color.White;
-            this.assignAuthors.Location = new System.Drawing.Point(545, 97);
-            this.assignAuthors.Name = "assignAuthors";
-            this.assignAuthors.Size = new System.Drawing.Size(119, 32);
-            this.assignAuthors.TabIndex = 0;
-            this.assignAuthors.Text = "Assign Authors";
-            this.assignAuthors.UseVisualStyleBackColor = false;
-            this.assignAuthors.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // manageAuth
-            // 
-            this.manageAuth.BackColor = System.Drawing.Color.White;
-            this.manageAuth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.manageAuth.Location = new System.Drawing.Point(21, 97);
-            this.manageAuth.Name = "manageAuth";
-            this.manageAuth.Size = new System.Drawing.Size(137, 31);
-            this.manageAuth.TabIndex = 0;
-            this.manageAuth.Text = "Manage Authors";
-            this.manageAuth.UseVisualStyleBackColor = false;
-            this.manageAuth.Click += new System.EventHandler(this.manageAuth_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Boutique_Publisher.Properties.Resources.reset;
-            this.pictureBox8.Location = new System.Drawing.Point(708, -3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(66, 50);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
@@ -376,6 +292,18 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // manageAuth
+            // 
+            this.manageAuth.BackColor = System.Drawing.Color.White;
+            this.manageAuth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.manageAuth.Location = new System.Drawing.Point(21, 97);
+            this.manageAuth.Name = "manageAuth";
+            this.manageAuth.Size = new System.Drawing.Size(137, 31);
+            this.manageAuth.TabIndex = 0;
+            this.manageAuth.Text = "Manage Authors";
+            this.manageAuth.UseVisualStyleBackColor = false;
+            this.manageAuth.Click += new System.EventHandler(this.manageAuth_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Boutique_Publisher.Properties.Resources.editor;
@@ -385,6 +313,83 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // manageFormats
+            // 
+            this.manageFormats.BackColor = System.Drawing.Color.White;
+            this.manageFormats.Location = new System.Drawing.Point(382, 97);
+            this.manageFormats.Name = "manageFormats";
+            this.manageFormats.Size = new System.Drawing.Size(111, 32);
+            this.manageFormats.TabIndex = 0;
+            this.manageFormats.Text = "Manage Formats";
+            this.manageFormats.UseVisualStyleBackColor = false;
+            this.manageFormats.Click += new System.EventHandler(this.manageFormats_Click);
+            // 
+            // mangeBooks
+            // 
+            this.mangeBooks.BackColor = System.Drawing.Color.White;
+            this.mangeBooks.Location = new System.Drawing.Point(202, 97);
+            this.mangeBooks.Name = "mangeBooks";
+            this.mangeBooks.Size = new System.Drawing.Size(120, 29);
+            this.mangeBooks.TabIndex = 0;
+            this.mangeBooks.Text = "Manage Books\n";
+            this.mangeBooks.UseVisualStyleBackColor = false;
+            this.mangeBooks.Click += new System.EventHandler(this.mangeBooks_Click);
+            // 
+            // royaltyReports
+            // 
+            this.royaltyReports.BackColor = System.Drawing.Color.White;
+            this.royaltyReports.Location = new System.Drawing.Point(373, 272);
+            this.royaltyReports.Name = "royaltyReports";
+            this.royaltyReports.Size = new System.Drawing.Size(119, 32);
+            this.royaltyReports.TabIndex = 0;
+            this.royaltyReports.Text = "Royalty Reports";
+            this.royaltyReports.UseVisualStyleBackColor = false;
+            this.royaltyReports.Click += new System.EventHandler(this.royaltyReports_Click);
+            // 
+            // processOrders
+            // 
+            this.processOrders.BackColor = System.Drawing.Color.White;
+            this.processOrders.Location = new System.Drawing.Point(193, 272);
+            this.processOrders.Name = "processOrders";
+            this.processOrders.Size = new System.Drawing.Size(133, 38);
+            this.processOrders.TabIndex = 0;
+            this.processOrders.Text = "Process Orders";
+            this.processOrders.UseVisualStyleBackColor = false;
+            this.processOrders.Click += new System.EventHandler(this.processOrders_Click);
+            // 
+            // retailPart
+            // 
+            this.retailPart.BackColor = System.Drawing.Color.White;
+            this.retailPart.Location = new System.Drawing.Point(28, 272);
+            this.retailPart.Name = "retailPart";
+            this.retailPart.Size = new System.Drawing.Size(130, 38);
+            this.retailPart.TabIndex = 0;
+            this.retailPart.Text = "Retail Partners\n";
+            this.retailPart.UseVisualStyleBackColor = false;
+            this.retailPart.Click += new System.EventHandler(this.retailPart_Click);
+            // 
+            // assignAuthors
+            // 
+            this.assignAuthors.BackColor = System.Drawing.Color.White;
+            this.assignAuthors.Location = new System.Drawing.Point(545, 97);
+            this.assignAuthors.Name = "assignAuthors";
+            this.assignAuthors.Size = new System.Drawing.Size(119, 32);
+            this.assignAuthors.TabIndex = 0;
+            this.assignAuthors.Text = "Assign Authors";
+            this.assignAuthors.UseVisualStyleBackColor = false;
+            this.assignAuthors.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Boutique_Publisher.Properties.Resources.reset;
+            this.pictureBox8.Location = new System.Drawing.Point(708, -3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(66, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // Dashboard
             // 
@@ -410,7 +415,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -418,6 +422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

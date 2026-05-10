@@ -22,7 +22,7 @@ namespace Boutique_Publisher
         // =========================================
         private void ProcessOrder_Load(object sender, EventArgs e)
         {
-           
+
             LoadPartners();
             LoadBooks();
             LoadOrders();
@@ -47,7 +47,7 @@ namespace Boutique_Publisher
 
             lblTotalPrice.Text = "0.00";
 
-          
+
             lblDate.Text =
                 DateTime.Now.ToShortDateString();
 
