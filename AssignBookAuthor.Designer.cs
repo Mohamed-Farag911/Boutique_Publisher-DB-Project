@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbAuthor = new System.Windows.Forms.ComboBox();
             this.cmbBook = new System.Windows.Forms.ComboBox();
             this.Auth_lable = new System.Windows.Forms.Label();
             this.Book_Lable = new System.Windows.Forms.Label();
             this.btnAssign = new System.Windows.Forms.Button();
             this.dgvAssignments = new System.Windows.Forms.DataGridView();
-            this.AUTHOR_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aUTHORBOOKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boutiquePublisherDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
@@ -60,83 +57,88 @@
             // 
             // cmbAuthor
             // 
+            this.cmbAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAuthor.FormattingEnabled = true;
-            this.cmbAuthor.Location = new System.Drawing.Point(84, 68);
+            this.cmbAuthor.Location = new System.Drawing.Point(112, 84);
+            this.cmbAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbAuthor.Name = "cmbAuthor";
-            this.cmbAuthor.Size = new System.Drawing.Size(176, 21);
+            this.cmbAuthor.Size = new System.Drawing.Size(233, 28);
             this.cmbAuthor.TabIndex = 0;
             // 
             // cmbBook
             // 
+            this.cmbBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBook.FormattingEnabled = true;
-            this.cmbBook.Location = new System.Drawing.Point(84, 128);
+            this.cmbBook.Location = new System.Drawing.Point(112, 158);
+            this.cmbBook.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBook.Name = "cmbBook";
-            this.cmbBook.Size = new System.Drawing.Size(185, 21);
+            this.cmbBook.Size = new System.Drawing.Size(245, 28);
             this.cmbBook.TabIndex = 0;
             // 
             // Auth_lable
             // 
             this.Auth_lable.AutoSize = true;
-            this.Auth_lable.Location = new System.Drawing.Point(35, 68);
+            this.Auth_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Auth_lable.Location = new System.Drawing.Point(20, 87);
+            this.Auth_lable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Auth_lable.Name = "Auth_lable";
-            this.Auth_lable.Size = new System.Drawing.Size(38, 13);
+            this.Auth_lable.Size = new System.Drawing.Size(63, 20);
             this.Auth_lable.TabIndex = 1;
             this.Auth_lable.Text = "Author";
             // 
             // Book_Lable
             // 
             this.Book_Lable.AutoSize = true;
-            this.Book_Lable.Location = new System.Drawing.Point(35, 131);
-            this.Book_Lable.MaximumSize = new System.Drawing.Size(50, 50);
+            this.Book_Lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Book_Lable.Location = new System.Drawing.Point(20, 165);
+            this.Book_Lable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Book_Lable.MaximumSize = new System.Drawing.Size(67, 62);
             this.Book_Lable.Name = "Book_Lable";
-            this.Book_Lable.Size = new System.Drawing.Size(32, 13);
+            this.Book_Lable.Size = new System.Drawing.Size(50, 20);
             this.Book_Lable.TabIndex = 1;
             this.Book_Lable.Text = "Book";
             // 
             // btnAssign
             // 
-            this.btnAssign.Location = new System.Drawing.Point(48, 184);
+            this.btnAssign.BackColor = System.Drawing.Color.Green;
+            this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAssign.Location = new System.Drawing.Point(16, 226);
+            this.btnAssign.Margin = new System.Windows.Forms.Padding(4);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(75, 23);
+            this.btnAssign.Size = new System.Drawing.Size(125, 60);
             this.btnAssign.TabIndex = 2;
             this.btnAssign.Text = "Assign";
-            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.UseVisualStyleBackColor = false;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click_1);
             // 
             // dgvAssignments
             // 
-            this.dgvAssignments.BackgroundColor = System.Drawing.SystemColors.GrayText;
+            this.dgvAssignments.AllowUserToAddRows = false;
+            this.dgvAssignments.AllowUserToDeleteRows = false;
+            this.dgvAssignments.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dgvAssignments.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAssignments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAssignments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAssignments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AUTHOR_ID,
-            this.AuthorName,
-            this.ISBN,
-            this.BookTitle});
-            this.dgvAssignments.Location = new System.Drawing.Point(333, 68);
+            this.dgvAssignments.EnableHeadersVisualStyles = false;
+            this.dgvAssignments.GridColor = System.Drawing.Color.Gray;
+            this.dgvAssignments.Location = new System.Drawing.Point(444, 87);
+            this.dgvAssignments.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAssignments.MultiSelect = false;
             this.dgvAssignments.Name = "dgvAssignments";
-            this.dgvAssignments.Size = new System.Drawing.Size(423, 247);
+            this.dgvAssignments.ReadOnly = true;
+            this.dgvAssignments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvAssignments.Size = new System.Drawing.Size(580, 387);
             this.dgvAssignments.TabIndex = 3;
+            this.dgvAssignments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignments_CellContentClick);
             this.dgvAssignments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssignments_CellContentClick);
-            // 
-            // AUTHOR_ID
-            // 
-            this.AUTHOR_ID.HeaderText = "Author ID";
-            this.AUTHOR_ID.Name = "AUTHOR_ID";
-            // 
-            // AuthorName
-            // 
-            this.AuthorName.HeaderText = "Author Name";
-            this.AuthorName.Name = "AuthorName";
-            // 
-            // ISBN
-            // 
-            this.ISBN.HeaderText = "ISBN";
-            this.ISBN.Name = "ISBN";
-            // 
-            // BookTitle
-            // 
-            this.BookTitle.HeaderText = "Book Title";
-            this.BookTitle.Name = "BookTitle";
             // 
             // aUTHORBOOKBindingSource
             // 
@@ -178,29 +180,38 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(234, 184);
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Location = new System.Drawing.Point(311, 226);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(125, 60);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(142, 184);
+            this.btnUpdate.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.Location = new System.Drawing.Point(153, 226);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(125, 60);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // AssignBookAuthor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvAssignments);
@@ -209,6 +220,9 @@
             this.Controls.Add(this.Auth_lable);
             this.Controls.Add(this.cmbBook);
             this.Controls.Add(this.cmbAuthor);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssignBookAuthor";
             this.Text = "AssignBookAuthor";
             this.Load += new System.EventHandler(this.AssignBookAuthor_Load);
@@ -240,10 +254,6 @@
         private BoutiquePublisherDBDataSetTableAdapters.AUTHORTableAdapter aUTHORTableAdapter;
         private System.Windows.Forms.BindingSource aUTHORBOOKBindingSource1;
         private System.Windows.Forms.BindingSource aUTHORBOOKBindingSource2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AUTHOR_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ISBN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookTitle;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
     }

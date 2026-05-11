@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -41,8 +43,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(430, 349);
+            this.btnDelete.BackColor = System.Drawing.Color.Brown;
+            this.btnDelete.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Location = new System.Drawing.Point(490, 349);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 52);
             this.btnDelete.TabIndex = 21;
@@ -53,8 +57,9 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(235, 349);
+            this.btnUpdate.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.Location = new System.Drawing.Point(216, 280);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(149, 52);
             this.btnUpdate.TabIndex = 20;
@@ -65,8 +70,9 @@
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.Green;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(72, 349);
+            this.btnInsert.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnInsert.Location = new System.Drawing.Point(50, 280);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(136, 53);
             this.btnInsert.TabIndex = 19;
@@ -77,54 +83,75 @@
             // txtPartnerID
             // 
             this.txtPartnerID.Enabled = false;
-            this.txtPartnerID.Location = new System.Drawing.Point(197, 129);
+            this.txtPartnerID.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPartnerID.Location = new System.Drawing.Point(170, 131);
             this.txtPartnerID.Name = "txtPartnerID";
-            this.txtPartnerID.Size = new System.Drawing.Size(124, 20);
+            this.txtPartnerID.Size = new System.Drawing.Size(72, 32);
             this.txtPartnerID.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(45, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 25);
+            this.label1.Size = new System.Drawing.Size(119, 40);
             this.label1.TabIndex = 23;
             this.label1.Text = "Partner_ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvPartners
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OliveDrab;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPartners.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPartners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPartners.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPartners.EnableHeadersVisualStyles = false;
             this.dgvPartners.Location = new System.Drawing.Point(479, 32);
             this.dgvPartners.Name = "dgvPartners";
+            this.dgvPartners.RowHeadersVisible = false;
             this.dgvPartners.Size = new System.Drawing.Size(298, 311);
             this.dgvPartners.TabIndex = 22;
+            this.dgvPartners.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormats_CellContentClick);
             this.dgvPartners.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormats_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(45, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 25);
+            this.label2.Size = new System.Drawing.Size(145, 40);
             this.label2.TabIndex = 25;
             this.label2.Text = "Partner Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtPartnerName
             // 
-            this.txtPartnerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPartnerName.Location = new System.Drawing.Point(197, 202);
+            this.txtPartnerName.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPartnerName.Location = new System.Drawing.Point(196, 205);
             this.txtPartnerName.Name = "txtPartnerName";
-            this.txtPartnerName.Size = new System.Drawing.Size(139, 22);
+            this.txtPartnerName.Size = new System.Drawing.Size(139, 32);
             this.txtPartnerName.TabIndex = 26;
             // 
             // RetailPartners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtPartnerName);
             this.Controls.Add(this.label2);
@@ -134,6 +161,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "RetailPartners";
             this.Text = "RetailPartners";
             this.Load += new System.EventHandler(this.RetailPartners_Load);

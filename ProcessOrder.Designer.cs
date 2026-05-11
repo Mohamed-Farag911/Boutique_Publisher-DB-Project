@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbPartner = new System.Windows.Forms.ComboBox();
             this.cmbFormat = new System.Windows.Forms.ComboBox();
             this.numQuantity = new System.Windows.Forms.NumericUpDown();
@@ -65,73 +66,80 @@
             // 
             // cmbPartner
             // 
+            this.cmbPartner.Font = new System.Drawing.Font("Cairo", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPartner.FormattingEnabled = true;
-            this.cmbPartner.Location = new System.Drawing.Point(229, 79);
+            this.cmbPartner.Location = new System.Drawing.Point(685, 94);
             this.cmbPartner.Name = "cmbPartner";
-            this.cmbPartner.Size = new System.Drawing.Size(121, 21);
+            this.cmbPartner.Size = new System.Drawing.Size(121, 31);
             this.cmbPartner.TabIndex = 0;
             // 
             // cmbFormat
             // 
+            this.cmbFormat.Font = new System.Drawing.Font("Cairo", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormat.FormattingEnabled = true;
-            this.cmbFormat.Location = new System.Drawing.Point(445, 111);
+            this.cmbFormat.Location = new System.Drawing.Point(392, 94);
             this.cmbFormat.Name = "cmbFormat";
-            this.cmbFormat.Size = new System.Drawing.Size(121, 21);
+            this.cmbFormat.Size = new System.Drawing.Size(121, 31);
             this.cmbFormat.TabIndex = 0;
             this.cmbFormat.SelectedIndexChanged += new System.EventHandler(this.cmbFormat_SelectedIndexChanged);
             // 
             // numQuantity
             // 
-            this.numQuantity.Location = new System.Drawing.Point(655, 75);
+            this.numQuantity.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numQuantity.Location = new System.Drawing.Point(1015, 85);
             this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(120, 20);
+            this.numQuantity.Size = new System.Drawing.Size(88, 37);
             this.numQuantity.TabIndex = 1;
             this.numQuantity.ValueChanged += new System.EventHandler(this.numQuantity_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(603, 77);
+            this.label1.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(911, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(98, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Quantity";
             // 
             // lblRetailPrice
             // 
             this.lblRetailPrice.AutoSize = true;
-            this.lblRetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetailPrice.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRetailPrice.ForeColor = System.Drawing.Color.Green;
-            this.lblRetailPrice.Location = new System.Drawing.Point(293, 177);
+            this.lblRetailPrice.Location = new System.Drawing.Point(1109, 160);
             this.lblRetailPrice.Name = "lblRetailPrice";
-            this.lblRetailPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblRetailPrice.Size = new System.Drawing.Size(58, 40);
             this.lblRetailPrice.TabIndex = 2;
             this.lblRetailPrice.Text = "0.00";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 87);
+            this.label3.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(535, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(144, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "Retail Partner";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(384, 114);
+            this.label4.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(276, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.Size = new System.Drawing.Size(82, 40);
             this.label4.TabIndex = 2;
             this.label4.Text = "Format";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(34, 137);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(40, 13);
+            this.lblDate.Size = new System.Drawing.Size(50, 24);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "lblDate";
             this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
@@ -139,11 +147,11 @@
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPrice.ForeColor = System.Drawing.Color.Green;
-            this.lblTotalPrice.Location = new System.Drawing.Point(85, 177);
+            this.lblTotalPrice.Location = new System.Drawing.Point(1109, 215);
             this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblTotalPrice.Size = new System.Drawing.Size(58, 40);
             this.lblTotalPrice.TabIndex = 2;
             this.lblTotalPrice.Text = "0.00";
             this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
@@ -160,55 +168,69 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(226, 182);
+            this.label6.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1019, 167);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
+            this.label6.Size = new System.Drawing.Size(91, 30);
             this.label6.TabIndex = 2;
             this.label6.Text = "Retail Price";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 179);
+            this.label7.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1019, 223);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.Size = new System.Drawing.Size(84, 30);
             this.label7.TabIndex = 2;
             this.label7.Text = "Total Price";
             // 
             // dgvOrders
             // 
             this.dgvOrders.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrders.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrders.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvOrders.EnableHeadersVisualStyles = false;
             this.dgvOrders.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvOrders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvOrders.Location = new System.Drawing.Point(3, 270);
             this.dgvOrders.Name = "dgvOrders";
-            this.dgvOrders.Size = new System.Drawing.Size(829, 288);
+            this.dgvOrders.Size = new System.Drawing.Size(1194, 416);
             this.dgvOrders.TabIndex = 3;
+            this.dgvOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.Location = new System.Drawing.Point(108, 137);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(40, 13);
+            this.lblTime.Size = new System.Drawing.Size(51, 24);
             this.lblTime.TabIndex = 2;
             this.lblTime.Text = "lblTime";
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(384, 212);
+            this.btnDelete.BackColor = System.Drawing.Color.Brown;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Location = new System.Drawing.Point(461, 213);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 52);
             this.btnDelete.TabIndex = 24;
@@ -219,7 +241,8 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Location = new System.Drawing.Point(189, 212);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(149, 52);
@@ -231,7 +254,8 @@
             // btnProcess
             // 
             this.btnProcess.BackColor = System.Drawing.Color.Green;
-            this.btnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcess.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnProcess.Location = new System.Drawing.Point(26, 212);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(136, 53);
@@ -243,36 +267,39 @@
             // txtOrderID
             // 
             this.txtOrderID.Enabled = false;
-            this.txtOrderID.Location = new System.Drawing.Point(68, 84);
+            this.txtOrderID.Font = new System.Drawing.Font("Cairo", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderID.Location = new System.Drawing.Point(114, 34);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(49, 20);
+            this.txtOrderID.Size = new System.Drawing.Size(49, 30);
             this.txtOrderID.TabIndex = 26;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 87);
+            this.label9.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.Size = new System.Drawing.Size(100, 40);
             this.label9.TabIndex = 25;
             this.label9.Text = "Order_ID";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(384, 75);
+            this.label10.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 85);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(108, 40);
             this.label10.TabIndex = 2;
             this.label10.Text = "Book Title";
             // 
             // cmbBook
             // 
+            this.cmbBook.Font = new System.Drawing.Font("Cairo", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBook.FormattingEnabled = true;
-            this.cmbBook.Location = new System.Drawing.Point(445, 72);
+            this.cmbBook.Location = new System.Drawing.Point(133, 94);
             this.cmbBook.Name = "cmbBook";
-            this.cmbBook.Size = new System.Drawing.Size(121, 21);
+            this.cmbBook.Size = new System.Drawing.Size(121, 31);
             this.cmbBook.TabIndex = 0;
             this.cmbBook.SelectedIndexChanged += new System.EventHandler(this.cmbBook_SelectedIndexChanged);
             // 
@@ -303,7 +330,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 570);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(1200, 698);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnDelete);
@@ -325,6 +353,7 @@
             this.Controls.Add(this.cmbBook);
             this.Controls.Add(this.cmbFormat);
             this.Controls.Add(this.cmbPartner);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ProcessOrder";
             this.Text = "ProcessOrder";
             this.Load += new System.EventHandler(this.ProcessOrder_Load);

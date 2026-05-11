@@ -87,10 +87,7 @@ namespace Boutique_Publisher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadAuthors();
-
-            // ID readonly
-            A_ID.ReadOnly = true;
+           
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -1,6 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Boutique_Publisher
@@ -12,380 +18,227 @@ namespace Boutique_Publisher
             InitializeComponent();
         }
 
-        // =========================================
-        // FORM LOAD
-        // =========================================
-
         private void AssignBookAuthor_Load(object sender, EventArgs e)
         {
             LoadAuthors();
             LoadBooks();
             LoadAssignments();
-
-            // Grid Style
-            dgvAssignments.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
-            dgvAssignments.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
-            dgvAssignments.MultiSelect = false;
-
-            dgvAssignments.ReadOnly = true;
         }
 
         // =========================================
-        // LOAD AUTHORS
+        // DATA LOADING
         // =========================================
 
         private void LoadAuthors()
         {
             try
             {
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT AUTHOR_ID, NAME FROM AUTHOR", con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                        "SELECT AUTHOR_ID, NAME FROM AUTHOR",
-                        con);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                cmbAuthor.DataSource = dt;
-
-                cmbAuthor.DisplayMember = "NAME";
-
-                cmbAuthor.ValueMember = "AUTHOR_ID";
-
-                cmbAuthor.SelectedIndex = -1;
+                    cmbAuthor.DataSource = dt;
+                    cmbAuthor.DisplayMember = "NAME";
+                    cmbAuthor.ValueMember = "AUTHOR_ID";
+                    cmbAuthor.SelectedIndex = -1;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
-        // =========================================
-        // LOAD BOOKS
-        // =========================================
 
         private void LoadBooks()
         {
             try
             {
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT ISBN, TITLE FROM BOOK", con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                        "SELECT ISBN, TITLE FROM BOOK",
-                        con);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                cmbBook.DataSource = dt;
-
-                cmbBook.DisplayMember = "TITLE";
-
-                cmbBook.ValueMember = "ISBN";
-
-                cmbBook.SelectedIndex = -1;
+                    cmbBook.DataSource = dt;
+                    cmbBook.DisplayMember = "TITLE";
+                    cmbBook.ValueMember = "ISBN";
+                    cmbBook.SelectedIndex = -1;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
-        // =========================================
-        // LOAD ASSIGNMENTS
-        // =========================================
 
         private void LoadAssignments()
         {
             try
             {
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
-
                 string query = @"
-        SELECT 
-            A.AUTHOR_ID,
-            A.NAME AS AuthorName,
-            B.ISBN,
-            B.TITLE AS BookTitle
+                    SELECT A.AUTHOR_ID, A.NAME AS AuthorName, B.ISBN, B.TITLE AS BookTitle
+                    FROM AUTHOR_BOOK AB
+                    INNER JOIN AUTHOR A ON AB.AUTHOR_ID = A.AUTHOR_ID
+                    INNER JOIN BOOK B ON AB.ISBN = B.ISBN";
 
-        FROM AUTHOR_BOOK AB
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(query, con);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-        INNER JOIN AUTHOR A
-            ON AB.AUTHOR_ID = A.AUTHOR_ID
+                    dgvAssignments.DataSource = dt;
+                }
 
-        INNER JOIN BOOK B
-            ON AB.ISBN = B.ISBN";
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                // مهم جدًا لمنع تكرار الأعمدة
-                dgvAssignments.Columns.Clear();
-
-                // ربط البيانات
-                dgvAssignments.DataSource = dt;
-
-                // شكل الجريد
-                dgvAssignments.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
-
-                dgvAssignments.SelectionMode =
-                    DataGridViewSelectionMode.FullRowSelect;
-
-                dgvAssignments.MultiSelect = false;
-
-                dgvAssignments.ReadOnly = true;
-
-                // أسماء الأعمدة
-                dgvAssignments.Columns[0].HeaderText =
-                    "Author ID";
-
-                dgvAssignments.Columns[1].HeaderText =
-                    "Author Name";
-
-                dgvAssignments.Columns[2].HeaderText =
-                    "ISBN";
-
-                dgvAssignments.Columns[3].HeaderText =
-                    "Book Title";
+                FormatGrid();
             }
-            catch (Exception ex)
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void FormatGrid()
+        {
+            // Grid Style
+            dgvAssignments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAssignments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAssignments.MultiSelect = false;
+            dgvAssignments.ReadOnly = true;
+
+            // Headers
+            if (dgvAssignments.Columns.Count > 0)
             {
-                MessageBox.Show(ex.Message);
+                dgvAssignments.Columns[0].HeaderText = "Author ID";
+                dgvAssignments.Columns[1].HeaderText = "Author Name";
+                dgvAssignments.Columns[2].HeaderText = "ISBN";
+                dgvAssignments.Columns[3].HeaderText = "Book Title";
             }
         }
 
         // =========================================
-        // ASSIGN AUTHOR TO BOOK
+        // CRUD OPERATIONS
         // =========================================
+
         private void btnAssign_Click_1(object sender, EventArgs e)
         {
+            if (cmbAuthor.SelectedIndex == -1 || cmbBook.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select both an Author and a Book");
+                return;
+            }
+
             try
             {
-                // Validation
-                if (cmbAuthor.SelectedIndex == -1)
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
-                    MessageBox.Show("Select Author");
-                    return;
+                    con.Open();
+
+                    // 1. Prevent Duplicate
+                    string checkQuery = "SELECT COUNT(*) FROM AUTHOR_BOOK WHERE AUTHOR_ID=@A_ID AND ISBN=@ISBN";
+                    SqlCommand checkCmd = new SqlCommand(checkQuery, con);
+                    checkCmd.Parameters.AddWithValue("@A_ID", cmbAuthor.SelectedValue);
+                    checkCmd.Parameters.AddWithValue("@ISBN", cmbBook.SelectedValue);
+
+                    if ((int)checkCmd.ExecuteScalar() > 0)
+                    {
+                        MessageBox.Show("This assignment already exists");
+                        return;
+                    }
+
+                    // 2. Insert
+                    string insertQuery = "INSERT INTO AUTHOR_BOOK (AUTHOR_ID, ISBN) VALUES (@A_ID, @ISBN)";
+                    SqlCommand cmd = new SqlCommand(insertQuery, con);
+                    cmd.Parameters.AddWithValue("@A_ID", cmbAuthor.SelectedValue);
+                    cmd.Parameters.AddWithValue("@ISBN", cmbBook.SelectedValue);
+
+                    cmd.ExecuteNonQuery();
                 }
 
-                if (cmbBook.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Select Book");
-                    return;
-                }
-
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
-
-                con.Open();
-
-                // Prevent Duplicate Assignment
-                SqlCommand checkCmd = new SqlCommand(
-                    @"SELECT COUNT(*) 
-                    FROM AUTHOR_BOOK
-                    WHERE AUTHOR_ID=@AUTHOR_ID
-                    AND ISBN=@ISBN",
-                    con);
-
-                checkCmd.Parameters.AddWithValue(
-                    "@AUTHOR_ID",
-                    cmbAuthor.SelectedValue);
-
-                checkCmd.Parameters.AddWithValue(
-                    "@ISBN",
-                    cmbBook.SelectedValue);
-
-                int count =
-                    (int)checkCmd.ExecuteScalar();
-
-                if (count > 0)
-                {
-                    MessageBox.Show(
-                        "This assignment already exists");
-
-                    con.Close();
-
-                    return;
-                }
-
-                // Insert Assignment
-                SqlCommand cmd = new SqlCommand(
-                    @"INSERT INTO AUTHOR_BOOK
-                    (AUTHOR_ID, ISBN)
-                    VALUES
-                    (@AUTHOR_ID, @ISBN)",
-                    con);
-
-                cmd.Parameters.AddWithValue(
-                    "@AUTHOR_ID",
-                    cmbAuthor.SelectedValue);
-
-                cmd.Parameters.AddWithValue(
-                    "@ISBN",
-                    cmbBook.SelectedValue);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-
+                MessageBox.Show("Author Assigned Successfully");
                 LoadAssignments();
-
-                MessageBox.Show(
-                    "Author Assigned Successfully");
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-
-        // =========================================
-        // DELETE ASSIGNMENT
-        // =========================================
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (dgvAssignments.CurrentRow == null)
+            {
+                MessageBox.Show("Select an assignment from the table first");
+                return;
+            }
+
             try
             {
-                if (dgvAssignments.CurrentRow == null)
+                string oldISBN = dgvAssignments.CurrentRow.Cells["ISBN"].Value.ToString();
+                int oldAuthorID = Convert.ToInt32(dgvAssignments.CurrentRow.Cells["AUTHOR_ID"].Value);
+
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
-                    MessageBox.Show("Select assignment first");
-                    return;
+                    con.Open();
+                    string query = @"UPDATE AUTHOR_BOOK 
+                                     SET AUTHOR_ID=@NEW_A_ID, ISBN=@NEW_ISBN 
+                                     WHERE AUTHOR_ID=@OLD_A_ID AND ISBN=@OLD_ISBN";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@NEW_A_ID", cmbAuthor.SelectedValue);
+                    cmd.Parameters.AddWithValue("@NEW_ISBN", cmbBook.SelectedValue);
+                    cmd.Parameters.AddWithValue("@OLD_A_ID", oldAuthorID);
+                    cmd.Parameters.AddWithValue("@OLD_ISBN", oldISBN);
+
+                    cmd.ExecuteNonQuery();
                 }
 
-                DialogResult result = MessageBox.Show(
-                    "Delete this assignment?",
-                    "Confirm Delete",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
-
-                if (result == DialogResult.No)
-                    return;
-
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
-
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand(
-                    @"DELETE FROM AUTHOR_BOOK
-                    WHERE AUTHOR_ID=@AUTHOR_ID
-                    AND ISBN=@ISBN",
-                    con);
-
-                cmd.Parameters.AddWithValue(
-                    "@AUTHOR_ID",
-                    dgvAssignments.CurrentRow.Cells["AUTHOR_ID"].Value);
-
-                cmd.Parameters.AddWithValue(
-                    "@ISBN",
-                    dgvAssignments.CurrentRow.Cells["ISBN"].Value);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-
+                MessageBox.Show("Updated Successfully");
                 LoadAssignments();
+                ClearFields();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (cmbAuthor.SelectedIndex == -1 || cmbBook.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select assignment first");
+                return;
+            }
+
+            if (MessageBox.Show("Delete this assignment?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    con.Open();
+                    string query = "DELETE FROM AUTHOR_BOOK WHERE AUTHOR_ID=@A_ID AND ISBN=@ISBN";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@A_ID", dgvAssignments.CurrentRow.Cells["AUTHOR_ID"].Value);
+                    cmd.Parameters.AddWithValue("@ISBN", dgvAssignments.CurrentRow.Cells["ISBN"].Value);
+
+                    cmd.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Deleted Successfully");
+                LoadAssignments();
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        // =========================================
+        // UTILITIES
+        // =========================================
+
+        private void ClearFields()
+        {
+            cmbAuthor.SelectedIndex = -1;
+            cmbBook.SelectedIndex = -1;
         }
 
         private void dgvAssignments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row =
-                    dgvAssignments.Rows[e.RowIndex];
-
-                // Fill Author ComboBox
-                cmbAuthor.SelectedValue =
-                    row.Cells["AUTHOR_ID"].Value;
-
-                // Fill Book ComboBox
-                cmbBook.SelectedValue =
-                    row.Cells["ISBN"].Value;
-            }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (dgvAssignments.CurrentRow == null)
-                {
-                    MessageBox.Show("Select assignment first");
-                    return;
-                }
-
-                SqlConnection con =
-                    new SqlConnection(DatabaseHelper.ConnectionString);
-
-                con.Open();
-
-                string oldISBN =
-                    dgvAssignments.CurrentRow.Cells["ISBN"].Value.ToString();
-
-                int oldAuthorID =
-                    Convert.ToInt32(
-                        dgvAssignments.CurrentRow.Cells["AUTHOR_ID"].Value);
-
-                SqlCommand cmd = new SqlCommand(
-                    @"UPDATE AUTHOR_BOOK
-              SET AUTHOR_ID=@NEW_AUTHOR_ID,
-                  ISBN=@NEW_ISBN
-              WHERE AUTHOR_ID=@OLD_AUTHOR_ID
-              AND ISBN=@OLD_ISBN",
-                    con);
-
-                cmd.Parameters.AddWithValue(
-                    "@NEW_AUTHOR_ID",
-                    cmbAuthor.SelectedValue);
-
-                cmd.Parameters.AddWithValue(
-                    "@NEW_ISBN",
-                    cmbBook.SelectedValue);
-
-                cmd.Parameters.AddWithValue(
-                    "@OLD_AUTHOR_ID",
-                    oldAuthorID);
-
-                cmd.Parameters.AddWithValue(
-                    "@OLD_ISBN",
-                    oldISBN);
-
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-
-                LoadAssignments();
-
-                MessageBox.Show("Updated Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                DataGridViewRow row = dgvAssignments.Rows[e.RowIndex];
+                cmbAuthor.SelectedValue = row.Cells["AUTHOR_ID"].Value;
+                cmbBook.SelectedValue = row.Cells["ISBN"].Value;
             }
         }
     }

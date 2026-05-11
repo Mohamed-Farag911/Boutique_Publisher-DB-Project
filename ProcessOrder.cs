@@ -433,7 +433,15 @@ namespace Boutique_Publisher
                         "Select order first");
 
                     return;
-                }
+                } if (!ValidateInputs()) return;
+                DialogResult result = MessageBox.Show(
+                  "Are you sure you want to delete this Order?",
+                  "Confirm Delete",
+                  MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning);
+
+                if (result == DialogResult.No)
+                    return;
 
                 SqlConnection con =
                     new SqlConnection(
@@ -518,7 +526,7 @@ namespace Boutique_Publisher
                     "@PARTNER_ID",
                     cmbPartner.SelectedValue);
 
-                // الوقت الحالي تلقائي
+            
                 cmd.Parameters.AddWithValue(
                     "@ORDER_DATE",
                     DateTime.Now);

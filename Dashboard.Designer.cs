@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTotalOrders = new System.Windows.Forms.Label();
@@ -57,6 +58,9 @@
             this.retailPart = new System.Windows.Forms.Button();
             this.assignAuthors = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,12 +78,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Abril Fatface", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Abril Fatface", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 28);
+            this.label1.Size = new System.Drawing.Size(482, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Boutique_Publisher-Dashboard";
             // 
@@ -88,30 +91,31 @@
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.lblTotalOrders);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(44, 71);
+            this.panel1.Location = new System.Drawing.Point(40, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(156, 100);
+            this.panel1.Size = new System.Drawing.Size(199, 113);
             this.panel1.TabIndex = 1;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // lblTotalOrders
             // 
             this.lblTotalOrders.AutoSize = true;
-            this.lblTotalOrders.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOrders.Font = new System.Drawing.Font("Cairo Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalOrders.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalOrders.Location = new System.Drawing.Point(31, 46);
+            this.lblTotalOrders.Location = new System.Drawing.Point(40, 53);
             this.lblTotalOrders.Name = "lblTotalOrders";
-            this.lblTotalOrders.Size = new System.Drawing.Size(68, 37);
+            this.lblTotalOrders.Size = new System.Drawing.Size(79, 60);
             this.lblTotalOrders.TabIndex = 0;
             this.lblTotalOrders.Text = "100";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cairo", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 31);
+            this.label2.Size = new System.Drawing.Size(166, 50);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Orders";
             // 
@@ -120,30 +124,31 @@
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.Controls.Add(this.lblTotalBooks);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(229, 71);
+            this.panel2.Location = new System.Drawing.Point(283, 71);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(156, 100);
+            this.panel2.Size = new System.Drawing.Size(202, 113);
             this.panel2.TabIndex = 1;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // lblTotalBooks
             // 
             this.lblTotalBooks.AutoSize = true;
-            this.lblTotalBooks.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBooks.Font = new System.Drawing.Font("Cairo Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalBooks.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalBooks.Location = new System.Drawing.Point(43, 46);
+            this.lblTotalBooks.Location = new System.Drawing.Point(58, 50);
             this.lblTotalBooks.Name = "lblTotalBooks";
-            this.lblTotalBooks.Size = new System.Drawing.Size(68, 37);
+            this.lblTotalBooks.Size = new System.Drawing.Size(79, 60);
             this.lblTotalBooks.TabIndex = 0;
             this.lblTotalBooks.Text = "100";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-5, 0);
+            this.label3.Font = new System.Drawing.Font("Cairo", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-9, -4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 31);
+            this.label3.Size = new System.Drawing.Size(160, 50);
             this.label3.TabIndex = 0;
             this.label3.Text = "Total Books";
             // 
@@ -152,30 +157,31 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.lblTotalAuthors);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(410, 71);
+            this.panel3.Location = new System.Drawing.Point(535, 71);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(174, 100);
+            this.panel3.Size = new System.Drawing.Size(215, 113);
             this.panel3.TabIndex = 1;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // lblTotalAuthors
             // 
             this.lblTotalAuthors.AutoSize = true;
-            this.lblTotalAuthors.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAuthors.Font = new System.Drawing.Font("Cairo Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAuthors.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalAuthors.Location = new System.Drawing.Point(48, 46);
+            this.lblTotalAuthors.Location = new System.Drawing.Point(70, 50);
             this.lblTotalAuthors.Name = "lblTotalAuthors";
-            this.lblTotalAuthors.Size = new System.Drawing.Size(68, 37);
+            this.lblTotalAuthors.Size = new System.Drawing.Size(79, 60);
             this.lblTotalAuthors.TabIndex = 0;
             this.lblTotalAuthors.Text = "100";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-6, 0);
+            this.label4.Font = new System.Drawing.Font("Cairo", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 31);
+            this.label4.Size = new System.Drawing.Size(181, 50);
             this.label4.TabIndex = 0;
             this.label4.Text = "Total Authors";
             // 
@@ -184,30 +190,31 @@
             this.panel4.BackColor = System.Drawing.Color.DarkViolet;
             this.panel4.Controls.Add(this.lblTotalPartners);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Location = new System.Drawing.Point(599, 71);
+            this.panel4.Location = new System.Drawing.Point(793, 71);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(175, 100);
+            this.panel4.Size = new System.Drawing.Size(198, 113);
             this.panel4.TabIndex = 1;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // lblTotalPartners
             // 
             this.lblTotalPartners.AutoSize = true;
-            this.lblTotalPartners.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPartners.Font = new System.Drawing.Font("Cairo Black", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPartners.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotalPartners.Location = new System.Drawing.Point(55, 46);
+            this.lblTotalPartners.Location = new System.Drawing.Point(58, 50);
             this.lblTotalPartners.Name = "lblTotalPartners";
-            this.lblTotalPartners.Size = new System.Drawing.Size(68, 37);
+            this.lblTotalPartners.Size = new System.Drawing.Size(79, 60);
             this.lblTotalPartners.TabIndex = 0;
             this.lblTotalPartners.Text = "100";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-6, 0);
+            this.label9.Font = new System.Drawing.Font("Cairo", 20.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(-9, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(185, 31);
+            this.label9.Size = new System.Drawing.Size(188, 50);
             this.label9.TabIndex = 0;
             this.label9.Text = "Total Partners";
             // 
@@ -227,78 +234,88 @@
             this.panel5.Controls.Add(this.processOrders);
             this.panel5.Controls.Add(this.retailPart);
             this.panel5.Controls.Add(this.assignAuthors);
-            this.panel5.Location = new System.Drawing.Point(92, 210);
+            this.panel5.Location = new System.Drawing.Point(77, 204);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(682, 377);
+            this.panel5.Size = new System.Drawing.Size(874, 441);
             this.panel5.TabIndex = 2;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Boutique_Publisher.Properties.Resources.attestation;
-            this.pictureBox7.Location = new System.Drawing.Point(545, 0);
+            this.pictureBox7.Location = new System.Drawing.Point(680, 29);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox7.Size = new System.Drawing.Size(157, 110);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Boutique_Publisher.Properties.Resources.seo_report;
-            this.pictureBox6.Location = new System.Drawing.Point(355, 175);
+            this.pictureBox6.Location = new System.Drawing.Point(476, 225);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox6.Size = new System.Drawing.Size(175, 130);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Boutique_Publisher.Properties.Resources.product_description;
-            this.pictureBox5.Location = new System.Drawing.Point(189, 175);
+            this.pictureBox5.Location = new System.Drawing.Point(238, 248);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox5.Size = new System.Drawing.Size(142, 107);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Boutique_Publisher.Properties.Resources.paper_sizes;
-            this.pictureBox4.Location = new System.Drawing.Point(363, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(476, 37);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox4.Size = new System.Drawing.Size(149, 102);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Boutique_Publisher.Properties.Resources.stack_of_books;
-            this.pictureBox3.Location = new System.Drawing.Point(202, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(238, 37);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox3.Size = new System.Drawing.Size(157, 112);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Boutique_Publisher.Properties.Resources.cooperation;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 175);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 248);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox2.Size = new System.Drawing.Size(159, 98);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // manageAuth
             // 
-            this.manageAuth.BackColor = System.Drawing.Color.White;
+            this.manageAuth.AutoSize = true;
+            this.manageAuth.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.manageAuth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.manageAuth.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.manageAuth.Location = new System.Drawing.Point(21, 97);
+            this.manageAuth.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageAuth.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.manageAuth.Location = new System.Drawing.Point(3, 137);
             this.manageAuth.Name = "manageAuth";
-            this.manageAuth.Size = new System.Drawing.Size(137, 31);
+            this.manageAuth.Size = new System.Drawing.Size(180, 50);
             this.manageAuth.TabIndex = 0;
             this.manageAuth.Text = "Manage Authors";
             this.manageAuth.UseVisualStyleBackColor = false;
@@ -307,19 +324,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Boutique_Publisher.Properties.Resources.editor;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(159, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // manageFormats
             // 
-            this.manageFormats.BackColor = System.Drawing.Color.White;
-            this.manageFormats.Location = new System.Drawing.Point(382, 97);
+            this.manageFormats.AutoSize = true;
+            this.manageFormats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.manageFormats.BackColor = System.Drawing.Color.MediumPurple;
+            this.manageFormats.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageFormats.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.manageFormats.Location = new System.Drawing.Point(458, 137);
             this.manageFormats.Name = "manageFormats";
-            this.manageFormats.Size = new System.Drawing.Size(111, 32);
+            this.manageFormats.Size = new System.Drawing.Size(181, 50);
             this.manageFormats.TabIndex = 0;
             this.manageFormats.Text = "Manage Formats";
             this.manageFormats.UseVisualStyleBackColor = false;
@@ -327,10 +349,14 @@
             // 
             // mangeBooks
             // 
-            this.mangeBooks.BackColor = System.Drawing.Color.White;
-            this.mangeBooks.Location = new System.Drawing.Point(202, 97);
+            this.mangeBooks.AutoSize = true;
+            this.mangeBooks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mangeBooks.BackColor = System.Drawing.Color.Maroon;
+            this.mangeBooks.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mangeBooks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.mangeBooks.Location = new System.Drawing.Point(233, 137);
             this.mangeBooks.Name = "mangeBooks";
-            this.mangeBooks.Size = new System.Drawing.Size(120, 29);
+            this.mangeBooks.Size = new System.Drawing.Size(162, 50);
             this.mangeBooks.TabIndex = 0;
             this.mangeBooks.Text = "Manage Books\n";
             this.mangeBooks.UseVisualStyleBackColor = false;
@@ -338,10 +364,14 @@
             // 
             // royaltyReports
             // 
-            this.royaltyReports.BackColor = System.Drawing.Color.White;
-            this.royaltyReports.Location = new System.Drawing.Point(373, 272);
+            this.royaltyReports.AutoSize = true;
+            this.royaltyReports.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.royaltyReports.BackColor = System.Drawing.Color.OliveDrab;
+            this.royaltyReports.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.royaltyReports.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.royaltyReports.Location = new System.Drawing.Point(464, 351);
             this.royaltyReports.Name = "royaltyReports";
-            this.royaltyReports.Size = new System.Drawing.Size(119, 32);
+            this.royaltyReports.Size = new System.Drawing.Size(175, 50);
             this.royaltyReports.TabIndex = 0;
             this.royaltyReports.Text = "Royalty Reports";
             this.royaltyReports.UseVisualStyleBackColor = false;
@@ -349,10 +379,14 @@
             // 
             // processOrders
             // 
-            this.processOrders.BackColor = System.Drawing.Color.White;
-            this.processOrders.Location = new System.Drawing.Point(193, 272);
+            this.processOrders.AutoSize = true;
+            this.processOrders.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.processOrders.BackColor = System.Drawing.Color.Chocolate;
+            this.processOrders.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.processOrders.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.processOrders.Location = new System.Drawing.Point(228, 351);
             this.processOrders.Name = "processOrders";
-            this.processOrders.Size = new System.Drawing.Size(133, 38);
+            this.processOrders.Size = new System.Drawing.Size(167, 50);
             this.processOrders.TabIndex = 0;
             this.processOrders.Text = "Process Orders";
             this.processOrders.UseVisualStyleBackColor = false;
@@ -360,10 +394,14 @@
             // 
             // retailPart
             // 
-            this.retailPart.BackColor = System.Drawing.Color.White;
-            this.retailPart.Location = new System.Drawing.Point(28, 272);
+            this.retailPart.AutoSize = true;
+            this.retailPart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.retailPart.BackColor = System.Drawing.Color.MidnightBlue;
+            this.retailPart.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retailPart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.retailPart.Location = new System.Drawing.Point(6, 351);
             this.retailPart.Name = "retailPart";
-            this.retailPart.Size = new System.Drawing.Size(130, 38);
+            this.retailPart.Size = new System.Drawing.Size(166, 50);
             this.retailPart.TabIndex = 0;
             this.retailPart.Text = "Retail Partners\n";
             this.retailPart.UseVisualStyleBackColor = false;
@@ -371,10 +409,14 @@
             // 
             // assignAuthors
             // 
-            this.assignAuthors.BackColor = System.Drawing.Color.White;
-            this.assignAuthors.Location = new System.Drawing.Point(545, 97);
+            this.assignAuthors.AutoSize = true;
+            this.assignAuthors.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.assignAuthors.BackColor = System.Drawing.Color.DarkGreen;
+            this.assignAuthors.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignAuthors.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.assignAuthors.Location = new System.Drawing.Point(661, 137);
             this.assignAuthors.Name = "assignAuthors";
-            this.assignAuthors.Size = new System.Drawing.Size(119, 32);
+            this.assignAuthors.Size = new System.Drawing.Size(167, 50);
             this.assignAuthors.TabIndex = 0;
             this.assignAuthors.Text = "Assign Authors";
             this.assignAuthors.UseVisualStyleBackColor = false;
@@ -383,19 +425,46 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Boutique_Publisher.Properties.Resources.reset;
-            this.pictureBox8.Location = new System.Drawing.Point(708, -3);
+            this.pictureBox8.Location = new System.Drawing.Point(892, 6);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(66, 50);
+            this.pictureBox8.Size = new System.Drawing.Size(80, 59);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(86, 662);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(51, 24);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "lblTime";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(12, 662);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(50, 24);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.Text = "lblDate";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 621);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.ClientSize = new System.Drawing.Size(1016, 695);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -403,6 +472,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Activated);
@@ -415,6 +485,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -459,5 +530,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Timer timer1;
     }
 }

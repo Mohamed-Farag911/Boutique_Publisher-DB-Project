@@ -20,104 +20,100 @@ namespace Boutique_Publisher
 
         private void Books_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+            // Genre ComboBox Setup
+            cmbGenre.Items.AddRange(new string[] { "Fantasy", "Horror", "Romance", "Drama", "Science Fiction" });
 
-            // Genre ComboBox
-            cmbGenre.Items.Add("Fantasy");
-            cmbGenre.Items.Add("Horror");
-            cmbGenre.Items.Add("Romance");
-            cmbGenre.Items.Add("Drama");
-            cmbGenre.Items.Add("Science Fiction");
+            // Target Age Group ComboBox Setup
+            cmbTargetAge.Items.AddRange(new string[] { "Kids", "Teens", "Adults" });
 
-            // Target Age Group ComboBox
-            cmbTargetAge.Items.Add("Kids");
-            cmbTargetAge.Items.Add("Teens");
-            cmbTargetAge.Items.Add("Adults");
-
+            // Optional: Load data automatically on start
+            // LoadBooks(); 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Show_Data_Click(object sender, EventArgs e)
+        // =========================
+        // DATA LOADING & GRID STYLE
+        // =========================
+        private void LoadBooks()
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                using (SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM BOOK", connection);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
 
-                connection.Open();
-
-                SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT * FROM BOOK",
-                    connection);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-
-                connection.Close();
+                // Grid Style (Matching Author style)
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dataGridView1.MultiSelect = false;
+                dataGridView1.ReadOnly = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        // =========================
+        // VALIDATION
+        // =========================
+        private bool ValidateInputs()
+        {
+            // ISBN Required
+            if (string.IsNullOrWhiteSpace(txtISBN.Text))
+            {
+                MessageBox.Show("ISBN is required");
+                txtISBN.Focus();
+                return false;
+            }
+
+            // Title Required
+            if (string.IsNullOrWhiteSpace(txtTitle.Text))
+            {
+                MessageBox.Show("Book title is required");
+                txtTitle.Focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        // =========================
+        // BUTTON EVENTS
+        // =========================
+        private void Show_Data_Click(object sender, EventArgs e)
+        {
+            LoadBooks();
         }
 
         private void Insert_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                if (!ValidateInputs()) return;
 
-                connection.Open();
+                using (SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "INSERT INTO BOOK (ISBN, TITLE, GENRE, TARGETAGEGROUP) VALUES (@ISBN, @TITLE, @GENRE, @TARGETAGEGROUP)",
+                        connection);
 
-                SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO BOOK (ISBN, TITLE, GENRE, TARGETAGEGROUP) VALUES (@ISBN, @TITLE, @GENRE, @TARGETAGEGROUP)",
-                    connection);
+                    cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
+                    cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
+                    cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
+                    cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
 
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-                cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
-                cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
-                cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
-
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
-
-                MessageBox.Show("Inserted Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void insert_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
-
-                connection.Open();
-
-                SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO BOOK (ISBN, TITLE, GENRE, TARGETAGEGROUP) VALUES (@ISBN, @TITLE, @GENRE, @TARGETAGEGROUP)",
-                    connection);
-
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-                cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
-                cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
-                cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
-
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
+                    cmd.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Inserted Successfully");
+                LoadBooks();
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -129,24 +125,32 @@ namespace Boutique_Publisher
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                if (string.IsNullOrWhiteSpace(txtISBN.Text))
+                {
+                    MessageBox.Show("Select a book via ISBN first");
+                    return;
+                }
 
-                connection.Open();
+                if (!ValidateInputs()) return;
 
-                SqlCommand cmd = new SqlCommand(
-                    "UPDATE BOOK SET TITLE = @TITLE, GENRE = @GENRE, TARGETAGEGROUP = @TARGETAGEGROUP WHERE ISBN = @ISBN",
-                    connection);
+                using (SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "UPDATE BOOK SET TITLE = @TITLE, GENRE = @GENRE, TARGETAGEGROUP = @TARGETAGEGROUP WHERE ISBN = @ISBN",
+                        connection);
 
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-                cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
-                cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
-                cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
+                    cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
+                    cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
+                    cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
+                    cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
 
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
+                    cmd.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Updated Successfully");
+                LoadBooks();
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -158,21 +162,31 @@ namespace Boutique_Publisher
         {
             try
             {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
+                if (string.IsNullOrWhiteSpace(txtISBN.Text))
+                {
+                    MessageBox.Show("Select a book via ISBN first");
+                    return;
+                }
 
-                connection.Open();
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to delete this book?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                SqlCommand cmd = new SqlCommand(
-                    "DELETE FROM BOOK WHERE ISBN = @ISBN",
-                    connection);
+                if (result == DialogResult.No) return;
 
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
+                using (SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM BOOK WHERE ISBN = @ISBN", connection);
+                    cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
+                    cmd.ExecuteNonQuery();
+                }
 
                 MessageBox.Show("Deleted Successfully");
+                LoadBooks();
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -180,33 +194,15 @@ namespace Boutique_Publisher
             }
         }
 
-        private void update_Click_1(object sender, EventArgs e)
+        // =========================
+        // UTILITIES
+        // =========================
+        private void ClearFields()
         {
-            try
-            {
-                SqlConnection connection = new SqlConnection(DatabaseHelper.ConnectionString);
-
-                connection.Open();
-
-                SqlCommand cmd = new SqlCommand(
-                    "UPDATE BOOK SET TITLE = @TITLE, GENRE = @GENRE, TARGETAGEGROUP = @TARGETAGEGROUP WHERE ISBN = @ISBN",
-                    connection);
-
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-                cmd.Parameters.AddWithValue("@TITLE", txtTitle.Text);
-                cmd.Parameters.AddWithValue("@GENRE", cmbGenre.Text);
-                cmd.Parameters.AddWithValue("@TARGETAGEGROUP", cmbTargetAge.Text);
-
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
-
-                MessageBox.Show("Updated Successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            txtISBN.Clear();
+            txtTitle.Clear();
+            cmbGenre.SelectedIndex = -1;
+            cmbTargetAge.SelectedIndex = -1;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -215,10 +211,10 @@ namespace Boutique_Publisher
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-                txtISBN.Text = row.Cells[0].Value.ToString();
-                txtTitle.Text = row.Cells[1].Value.ToString();
-                cmbGenre.Text = row.Cells[2].Value.ToString();
-                cmbTargetAge.Text = row.Cells[3].Value.ToString();
+                txtISBN.Text = row.Cells[0].Value?.ToString();
+                txtTitle.Text = row.Cells[1].Value?.ToString();
+                cmbGenre.Text = row.Cells[2].Value?.ToString();
+                cmbTargetAge.Text = row.Cells[3].Value?.ToString();
             }
         }
     }

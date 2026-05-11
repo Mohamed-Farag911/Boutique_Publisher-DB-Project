@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFormats = new System.Windows.Forms.DataGridView();
             this.fORMATBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.boutiquePublisherDBDataSet = new Boutique_Publisher.BoutiquePublisherDBDataSet();
@@ -48,6 +50,14 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fORMATBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boutiquePublisherDBDataSet)).BeginInit();
@@ -57,11 +67,43 @@
             // 
             // dgvFormats
             // 
+            this.dgvFormats.AllowUserToAddRows = false;
+            this.dgvFormats.AllowUserToDeleteRows = false;
+            this.dgvFormats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFormats.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFormats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFormats.Location = new System.Drawing.Point(377, 37);
+            this.dgvFormats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFormats.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFormats.EnableHeadersVisualStyles = false;
+            this.dgvFormats.Location = new System.Drawing.Point(339, 27);
             this.dgvFormats.Name = "dgvFormats";
-            this.dgvFormats.Size = new System.Drawing.Size(513, 311);
+            this.dgvFormats.ReadOnly = true;
+            this.dgvFormats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvFormats.Size = new System.Drawing.Size(601, 354);
             this.dgvFormats.TabIndex = 0;
+            this.dgvFormats.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormats_CellContentClick);
             this.dgvFormats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFormats_CellContentClick);
             // 
             // fORMATBindingSource
@@ -77,9 +119,10 @@
             // txtFormatID
             // 
             this.txtFormatID.Enabled = false;
+            this.txtFormatID.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFormatID.Location = new System.Drawing.Point(174, 68);
             this.txtFormatID.Name = "txtFormatID";
-            this.txtFormatID.Size = new System.Drawing.Size(82, 20);
+            this.txtFormatID.Size = new System.Drawing.Size(82, 32);
             this.txtFormatID.TabIndex = 6;
             this.txtFormatID.TextChanged += new System.EventHandler(this.A_ID_TextChanged);
             // 
@@ -108,9 +151,10 @@
             // txtISBN
             // 
             this.txtISBN.Enabled = false;
+            this.txtISBN.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtISBN.Location = new System.Drawing.Point(174, 119);
             this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(159, 20);
+            this.txtISBN.Size = new System.Drawing.Size(159, 32);
             this.txtISBN.TabIndex = 7;
             // 
             // label3
@@ -125,19 +169,21 @@
             // 
             // cmbBookTitle
             // 
+            this.cmbBookTitle.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBookTitle.FormattingEnabled = true;
             this.cmbBookTitle.Location = new System.Drawing.Point(174, 162);
             this.cmbBookTitle.Name = "cmbBookTitle";
-            this.cmbBookTitle.Size = new System.Drawing.Size(159, 21);
+            this.cmbBookTitle.Size = new System.Drawing.Size(159, 32);
             this.cmbBookTitle.TabIndex = 9;
             this.cmbBookTitle.SelectedIndexChanged += new System.EventHandler(this.cmbBookTitle_SelectedIndexChanged);
             // 
             // cmbFormatType
             // 
+            this.cmbFormatType.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFormatType.FormattingEnabled = true;
             this.cmbFormatType.Location = new System.Drawing.Point(174, 210);
             this.cmbFormatType.Name = "cmbFormatType";
-            this.cmbFormatType.Size = new System.Drawing.Size(159, 21);
+            this.cmbFormatType.Size = new System.Drawing.Size(159, 32);
             this.cmbFormatType.TabIndex = 10;
             // 
             // label4
@@ -173,6 +219,7 @@
             // numProductionCost
             // 
             this.numProductionCost.DecimalPlaces = 2;
+            this.numProductionCost.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numProductionCost.Increment = new decimal(new int[] {
             50,
             0,
@@ -185,13 +232,14 @@
             0,
             0});
             this.numProductionCost.Name = "numProductionCost";
-            this.numProductionCost.Size = new System.Drawing.Size(120, 20);
+            this.numProductionCost.Size = new System.Drawing.Size(120, 32);
             this.numProductionCost.TabIndex = 14;
             this.numProductionCost.ThousandsSeparator = true;
             // 
             // numRetailPrice
             // 
             this.numRetailPrice.DecimalPlaces = 2;
+            this.numRetailPrice.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRetailPrice.Increment = new decimal(new int[] {
             50,
             0,
@@ -204,7 +252,7 @@
             0,
             0});
             this.numRetailPrice.Name = "numRetailPrice";
-            this.numRetailPrice.Size = new System.Drawing.Size(120, 20);
+            this.numRetailPrice.Size = new System.Drawing.Size(120, 32);
             this.numRetailPrice.TabIndex = 15;
             this.numRetailPrice.ThousandsSeparator = true;
             // 
@@ -214,7 +262,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.BackColor = System.Drawing.Color.Brown;
+            this.btnDelete.Font = new System.Drawing.Font("Cairo Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Location = new System.Drawing.Point(410, 387);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 52);
@@ -226,7 +276,8 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Location = new System.Drawing.Point(215, 387);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(149, 52);
@@ -238,7 +289,8 @@
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.Green;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Font = new System.Drawing.Font("Cairo", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnInsert.Location = new System.Drawing.Point(52, 387);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(136, 53);
@@ -247,10 +299,59 @@
             this.btnInsert.UseVisualStyleBackColor = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // Formats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(952, 460);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -302,5 +403,13 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

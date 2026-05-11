@@ -29,6 +29,15 @@ namespace Boutique_Publisher
         private void Dashboard_Activated(object sender, EventArgs e)
         {
             LoadStatistics();
+            lblDate.Text =
+               DateTime.Now.ToShortDateString();
+            timer1.Start();
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text =
+                DateTime.Now.ToString("hh:mm:ss tt");
         }
         private void LoadStatistics()
         {
@@ -178,6 +187,46 @@ namespace Boutique_Publisher
             retailPartners.Show();
         }
 
-        
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Author form = new Author();
+            form.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Books books = new Books();
+            books.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Formats formats = new Formats();
+            formats.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            AssignBookAuthor form = new AssignBookAuthor();
+            form.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            RetailPartners retailPartners = new RetailPartners();
+            retailPartners.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            ProcessOrder orders = new ProcessOrder();
+            orders.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            RoyaltyReport royaltyReport = new RoyaltyReport();
+            royaltyReport.Show();
+        }
     }
 }
