@@ -3,18 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Boutique_Publisher||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\royaltyreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\royaltyreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:royaltyreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -22,7 +26,7 @@
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,47 +34,44 @@
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:assignbookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\author.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\author.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:author.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\assignbookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\assignbookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:assignbookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:processorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|6185191f-1008-4fb2-a715-3a4e4f27e610"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -88,19 +89,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "DataBaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\DataBaseHelper.cs",
+              "RelativeDocumentMoniker": "DataBaseHelper.cs",
+              "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\DataBaseHelper.cs",
+              "RelativeToolTip": "DataBaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T03:42:53.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Boutique_Publisher",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Boutique_Publisher.csproj",
               "RelativeDocumentMoniker": "Boutique_Publisher.csproj",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Boutique_Publisher.csproj",
               "RelativeToolTip": "Boutique_Publisher.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-11T02:41:08.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:41:08.446Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Author.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.Designer.cs",
               "RelativeDocumentMoniker": "Author.Designer.cs",
@@ -108,12 +121,11 @@
               "RelativeToolTip": "Author.Designer.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwEYBAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:38:13.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:38:13.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -126,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -134,12 +146,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:28:22.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:28:22.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AssignBookAuthor.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\AssignBookAuthor.cs",
               "RelativeDocumentMoniker": "AssignBookAuthor.cs",
@@ -147,12 +158,11 @@
               "RelativeToolTip": "AssignBookAuthor.cs",
               "ViewState": "AgIAAKcAAAAAAAAAAAAAwL4AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:27:36.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:27:36.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ProcessOrder.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\ProcessOrder.cs",
               "RelativeDocumentMoniker": "ProcessOrder.cs",
@@ -160,24 +170,22 @@
               "RelativeToolTip": "ProcessOrder.cs",
               "ViewState": "AgIAAFYCAAAAAAAAAAAQwBACAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:27:06.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:27:06.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ProcessOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\ProcessOrder.cs",
               "RelativeDocumentMoniker": "ProcessOrder.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\ProcessOrder.cs [Design]",
               "RelativeToolTip": "ProcessOrder.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:27:05.52Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-11T02:27:05.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "RetailPartners.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RetailPartners.cs",
               "RelativeDocumentMoniker": "RetailPartners.cs",
@@ -190,19 +198,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RoyaltyReport.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RoyaltyReport.cs",
               "RelativeDocumentMoniker": "RoyaltyReport.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RoyaltyReport.cs [Design]",
               "RelativeToolTip": "RoyaltyReport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:26:49.11Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-11T02:26:49.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RetailPartners.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RetailPartners.cs",
               "RelativeDocumentMoniker": "RetailPartners.cs",
@@ -214,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -222,24 +229,22 @@
               "RelativeToolTip": "Dashboard.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAcwGkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T01:19:18.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T01:19:18.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Dashboard.cs [Design]",
               "RelativeToolTip": "Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T01:10:51.13Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-11T01:10:51.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Books.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Books.cs",
               "RelativeDocumentMoniker": "Books.cs",
@@ -247,12 +252,11 @@
               "RelativeToolTip": "Books.cs",
               "ViewState": "AgIAALMAAAAAAAAAAAAAwNwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T00:56:01.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T00:56:01.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.cs",
               "RelativeDocumentMoniker": "Author.cs",
@@ -260,44 +264,40 @@
               "RelativeToolTip": "Author.cs",
               "ViewState": "AgIAAOUAAAAAAAAAAAAmwAUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T00:17:34.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T00:17:34.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Books.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Books.cs",
               "RelativeDocumentMoniker": "Books.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Books.cs [Design]",
               "RelativeToolTip": "Books.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T01:08:47.971Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-10T01:08:47.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Author.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.cs",
               "RelativeDocumentMoniker": "Author.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.cs [Design]",
               "RelativeToolTip": "Author.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T01:08:45.649Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-10T01:08:45.649Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AssignBookAuthor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\AssignBookAuthor.cs",
               "RelativeDocumentMoniker": "AssignBookAuthor.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\AssignBookAuthor.cs [Design]",
               "RelativeToolTip": "AssignBookAuthor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T01:08:42.708Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-10T01:08:42.708Z"
             }
           ]
         }

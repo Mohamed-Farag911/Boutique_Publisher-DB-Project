@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|c:\\users\\mohamed farag\\documents\\boutique_publisher-db-project\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{692C8D8A-058E-4CDA-9CE9-284A34D331A6}|Boutique_Publisher.csproj|solutionrelative:retailpartners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -77,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,7 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "DataBaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\DataBaseHelper.cs",
+              "RelativeDocumentMoniker": "DataBaseHelper.cs",
+              "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\DataBaseHelper.cs",
+              "RelativeToolTip": "DataBaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T03:42:53.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Boutique_Publisher",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Boutique_Publisher.csproj",
               "RelativeDocumentMoniker": "Boutique_Publisher.csproj",
@@ -96,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Author.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.Designer.cs",
               "RelativeDocumentMoniker": "Author.Designer.cs",
@@ -108,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -120,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -132,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AssignBookAuthor.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\AssignBookAuthor.cs",
               "RelativeDocumentMoniker": "AssignBookAuthor.cs",
@@ -144,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ProcessOrder.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\ProcessOrder.cs",
               "RelativeDocumentMoniker": "ProcessOrder.cs",
@@ -156,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ProcessOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\ProcessOrder.cs",
               "RelativeDocumentMoniker": "ProcessOrder.cs",
@@ -167,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "RetailPartners.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RetailPartners.cs",
               "RelativeDocumentMoniker": "RetailPartners.cs",
@@ -175,12 +192,11 @@
               "RelativeToolTip": "RetailPartners.cs",
               "ViewState": "AgIAADoBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:27:00.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T02:27:00.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RoyaltyReport.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RoyaltyReport.cs",
               "RelativeDocumentMoniker": "RoyaltyReport.cs",
@@ -191,19 +207,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RetailPartners.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RetailPartners.cs",
               "RelativeDocumentMoniker": "RetailPartners.cs",
               "ToolTip": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\RetailPartners.cs [Design]",
               "RelativeToolTip": "RetailPartners.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T02:10:48.426Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-11T02:10:48.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -215,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -226,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Books.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Books.cs",
               "RelativeDocumentMoniker": "Books.cs",
@@ -238,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.cs",
               "RelativeDocumentMoniker": "Author.cs",
@@ -250,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Books.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Books.cs",
               "RelativeDocumentMoniker": "Books.cs",
@@ -261,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Author.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\Author.cs",
               "RelativeDocumentMoniker": "Author.cs",
@@ -272,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AssignBookAuthor.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Mohamed Farag\\Documents\\Boutique_Publisher-DB-Project\\AssignBookAuthor.cs",
               "RelativeDocumentMoniker": "AssignBookAuthor.cs",
