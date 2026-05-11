@@ -17,15 +17,6 @@ The system is designed to help publishing companies manage:
 The project demonstrates database design, relational database implementation, CRUD operations, business logic processing, and dashboard/report generation.
 
 ---
-# Screenshots
-
-## Entity Relationship Diagram (ERD)
-
-<p align="center">
-  <img src="Assets/ERD.png" width="700"/>
-</p>
-
----
 
 # Screenshots
 
