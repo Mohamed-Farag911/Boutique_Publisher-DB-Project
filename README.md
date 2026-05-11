@@ -17,6 +17,31 @@ The system is designed to help publishing companies manage:
 The project demonstrates database design, relational database implementation, CRUD operations, business logic processing, and dashboard/report generation.
 
 ---
+# Screenshots
+
+## Entity Relationship Diagram (ERD)
+
+<p align="center">
+  <img src="Assets/ERD.png" width="700"/>
+</p>
+
+---
+
+| Dashboard | Authors |
+|---|---|
+| ![](Assets/Dashboard.png) | ![](Assets/Authors.png) |
+
+| Books | Orders |
+|---|---|
+| ![](Assets/books.png) | ![](Assets/orders.png) |
+
+| Partners | Report |
+|---|---|
+| ![](Assets/partners.png) | ![](Assets/report.png) |
+
+| Assignment |  |
+|---|---|
+| ![](Assets/assignment.png) |  |
 
 # Technologies Used
 
@@ -287,41 +312,9 @@ Total Sales = 40 × 10 = 400
 Royalty Amount = 400 × 15% = 60
 ```
 
----
 
-# Screenshots
 
-| Dashboard | Authors |
-|---|---|
-| ![](Assets/Dashboard.png) | ![](Assets/Authors.png) |
 
-| Books | Orders |
-|---|---|
-| ![](Assets/books.png) | ![](Assets/orders.png) |
-
-| Partners | Report |
-|---|---|
-| ![](Assets/partners.png) | ![](Assets/report.png) |
-
-| ERD | Assignment |
-|---|---|
-| ![](Assets/ERD.png) | ![](Assets/assignment.png) |
----
-
-# Future Improvements
-
-* Authentication System
-* Export Reports to PDF/Excel
-* Search Filters
-* Charts and Analytics
-* Dark Mode UI
-* Role-Based Access
-
----
-
-# Contributors
-
-Developed as a Database Systems and Windows Forms project.
 
 ---
 
