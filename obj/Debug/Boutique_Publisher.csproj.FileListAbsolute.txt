@@ -29,3 +29,4 @@ C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\bin\Debug\Boutiqu
 C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.Formats.resources
 C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.RetailPartners.resources
 C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.RoyaltyReport.resources
+C:\Users\Mohamed Farag\Documents\Boutique_Publisher-DB-Project\obj\Debug\Boutique_Publisher.SearchBooks.resources

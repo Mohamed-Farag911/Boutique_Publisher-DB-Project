@@ -27,21 +27,39 @@ The project demonstrates database design, relational database implementation, CR
 
 ---
 
-| Dashboard | Authors |
-|---|---|
-| ![](Assets/Dashboard.png) | ![](Assets/Authors.png) |
+# Screenshots
 
-| Books | Orders |
-|---|---|
-| ![](Assets/books.png) | ![](Assets/orders.png) |
+## Dashboard
 
-| Partners | Report |
-|---|---|
-| ![](Assets/partners.png) | ![](Assets/report.png) |
+<p align="center">
+  <img src="Assets/Dashboard.png" width="900"/>
+</p>
 
-| Assignment |  |
+---
+
+## Entity Relationship Diagram (ERD)
+
+<p align="center">
+  <img src="Assets/ERD.png" width="700"/>
+</p>
+
+---
+
+| Authors | Books |
 |---|---|
-| ![](Assets/assignment.png) |  |
+| ![](Assets/Authors.png) | ![](Assets/books.png) |
+
+| Formats | Search Books |
+|---|---|
+| ![](Assets/formats.png) | ![](Assets/search.png) |
+
+| Orders | Partners |
+|---|---|
+| ![](Assets/orders.png) | ![](Assets/partners.png) |
+
+| Report | Assignment |
+|---|---|
+| ![](Assets/report.png) | ![](Assets/assignment.png) |
 
 # Technologies Used
 
@@ -70,12 +88,20 @@ The project demonstrates database design, relational database implementation, CR
 * Delete books
 * Search books
 * Display all books
+* Advanced book search using:
+  * Title
+  * Genre
+  * ISBN
+  * Author Name
+  * Release Format
 
 ## Author Assignment
 
 * Assign one or multiple authors to books
 * Support co-authorship
 * Display author-book relationships
+
+
 
 ## Format Management
 

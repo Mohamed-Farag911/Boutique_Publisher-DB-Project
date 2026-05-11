@@ -105,6 +105,12 @@
     <Compile Include="RoyaltyReport.Designer.cs">
       <DependentUpon>RoyaltyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchBooks.Designer.cs">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AssignBookAuthor.resx">
       <DependentUpon>AssignBookAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoyaltyReport.resx">
       <DependentUpon>RoyaltyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchBooks.resx">
+      <DependentUpon>SearchBooks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BoutiquePublisherDBDataSet.xsc">
       <DependentUpon>BoutiquePublisherDBDataSet.xsd</DependentUpon>
@@ -189,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ICONS\refresh-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ICONS\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

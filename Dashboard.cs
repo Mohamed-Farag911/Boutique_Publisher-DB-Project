@@ -158,10 +158,14 @@ namespace Boutique_Publisher
             RoyaltyReport royaltyReport = new RoyaltyReport();
             royaltyReport.Show();
         }
+        private void btnSearchBooks_Click(object sender, EventArgs e)
+        {
+            SearchBooks search = new SearchBooks();
+            search.Show();
+        }
 
-        
 
-       
+
 
         private void panel1_Click(object sender, EventArgs e)
         {
@@ -228,5 +232,10 @@ namespace Boutique_Publisher
             RoyaltyReport royaltyReport = new RoyaltyReport();
             royaltyReport.Show();
         }
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            SearchBooks search = new SearchBooks();
+            search.Show();
+    }
     }
 }

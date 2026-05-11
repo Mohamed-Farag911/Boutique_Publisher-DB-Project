@@ -18,6 +18,7 @@ namespace Boutique_Publisher
             Application.SetCompatibleTextRenderingDefault(false);
            
             Application.Run(new Dashboard());
+          
        
         }
     }

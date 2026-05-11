@@ -43,37 +43,40 @@
             this.lblTotalPartners = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.manageAuth = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.manageFormats = new System.Windows.Forms.Button();
             this.mangeBooks = new System.Windows.Forms.Button();
             this.royaltyReports = new System.Windows.Forms.Button();
             this.processOrders = new System.Windows.Forms.Button();
             this.retailPart = new System.Windows.Forms.Button();
             this.assignAuthors = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SearchBooks = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -221,6 +224,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox7);
+            this.panel5.Controls.Add(this.pictureBox9);
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Controls.Add(this.pictureBox4);
@@ -229,6 +233,7 @@
             this.panel5.Controls.Add(this.manageAuth);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.manageFormats);
+            this.panel5.Controls.Add(this.SearchBooks);
             this.panel5.Controls.Add(this.mangeBooks);
             this.panel5.Controls.Add(this.royaltyReports);
             this.panel5.Controls.Add(this.processOrders);
@@ -238,72 +243,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(874, 441);
             this.panel5.TabIndex = 2;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Boutique_Publisher.Properties.Resources.attestation;
-            this.pictureBox7.Location = new System.Drawing.Point(680, 29);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(157, 110);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Boutique_Publisher.Properties.Resources.seo_report;
-            this.pictureBox6.Location = new System.Drawing.Point(476, 225);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(175, 130);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Boutique_Publisher.Properties.Resources.product_description;
-            this.pictureBox5.Location = new System.Drawing.Point(238, 248);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(142, 107);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Boutique_Publisher.Properties.Resources.paper_sizes;
-            this.pictureBox4.Location = new System.Drawing.Point(476, 37);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(149, 102);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Boutique_Publisher.Properties.Resources.stack_of_books;
-            this.pictureBox3.Location = new System.Drawing.Point(238, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(157, 112);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Boutique_Publisher.Properties.Resources.cooperation;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 248);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 98);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // manageAuth
             // 
@@ -321,17 +260,6 @@
             this.manageAuth.UseVisualStyleBackColor = false;
             this.manageAuth.Click += new System.EventHandler(this.manageAuth_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Boutique_Publisher.Properties.Resources.editor;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // manageFormats
             // 
             this.manageFormats.AutoSize = true;
@@ -339,7 +267,7 @@
             this.manageFormats.BackColor = System.Drawing.Color.MediumPurple;
             this.manageFormats.Font = new System.Drawing.Font("Cairo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageFormats.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.manageFormats.Location = new System.Drawing.Point(458, 137);
+            this.manageFormats.Location = new System.Drawing.Point(448, 137);
             this.manageFormats.Name = "manageFormats";
             this.manageFormats.Size = new System.Drawing.Size(181, 50);
             this.manageFormats.TabIndex = 0;
@@ -369,7 +297,7 @@
             this.royaltyReports.BackColor = System.Drawing.Color.OliveDrab;
             this.royaltyReports.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.royaltyReports.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.royaltyReports.Location = new System.Drawing.Point(464, 351);
+            this.royaltyReports.Location = new System.Drawing.Point(448, 351);
             this.royaltyReports.Name = "royaltyReports";
             this.royaltyReports.Size = new System.Drawing.Size(175, 50);
             this.royaltyReports.TabIndex = 0;
@@ -414,24 +342,13 @@
             this.assignAuthors.BackColor = System.Drawing.Color.DarkGreen;
             this.assignAuthors.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignAuthors.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.assignAuthors.Location = new System.Drawing.Point(661, 137);
+            this.assignAuthors.Location = new System.Drawing.Point(680, 145);
             this.assignAuthors.Name = "assignAuthors";
             this.assignAuthors.Size = new System.Drawing.Size(167, 50);
             this.assignAuthors.TabIndex = 0;
             this.assignAuthors.Text = "Assign Authors";
             this.assignAuthors.UseVisualStyleBackColor = false;
             this.assignAuthors.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Boutique_Publisher.Properties.Resources.reset;
-            this.pictureBox8.Location = new System.Drawing.Point(892, 6);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(80, 59);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // lblTime
             // 
@@ -456,6 +373,120 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // SearchBooks
+            // 
+            this.SearchBooks.AutoSize = true;
+            this.SearchBooks.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SearchBooks.BackColor = System.Drawing.Color.Teal;
+            this.SearchBooks.Font = new System.Drawing.Font("Cairo ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBooks.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SearchBooks.Location = new System.Drawing.Point(662, 351);
+            this.SearchBooks.Name = "SearchBooks";
+            this.SearchBooks.Size = new System.Drawing.Size(163, 50);
+            this.SearchBooks.TabIndex = 0;
+            this.SearchBooks.Text = "Search Catalog";
+            this.SearchBooks.UseVisualStyleBackColor = false;
+            this.SearchBooks.Click += new System.EventHandler(this.btnSearchBooks_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Boutique_Publisher.Properties.Resources.reset;
+            this.pictureBox8.Location = new System.Drawing.Point(892, 6);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(80, 59);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Boutique_Publisher.Properties.Resources.attestation;
+            this.pictureBox7.Location = new System.Drawing.Point(680, 29);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(157, 110);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Boutique_Publisher.Properties.Resources.search;
+            this.pictureBox9.Location = new System.Drawing.Point(662, 225);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(175, 130);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 6;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Boutique_Publisher.Properties.Resources.seo_report;
+            this.pictureBox6.Location = new System.Drawing.Point(448, 225);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(175, 130);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Boutique_Publisher.Properties.Resources.product_description;
+            this.pictureBox5.Location = new System.Drawing.Point(238, 248);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(142, 107);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Boutique_Publisher.Properties.Resources.paper_sizes;
+            this.pictureBox4.Location = new System.Drawing.Point(448, 37);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(149, 102);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Boutique_Publisher.Properties.Resources.stack_of_books;
+            this.pictureBox3.Location = new System.Drawing.Point(238, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(157, 112);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Boutique_Publisher.Properties.Resources.cooperation;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 248);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(159, 98);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Boutique_Publisher.Properties.Resources.editor;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(159, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Dashboard
             // 
@@ -486,14 +517,15 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,5 +565,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button SearchBooks;
     }
 }
