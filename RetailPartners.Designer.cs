@@ -102,6 +102,9 @@
             // 
             // dgvPartners
             // 
+            this.dgvPartners.AllowUserToAddRows = false;
+            this.dgvPartners.AllowUserToDeleteRows = false;
+            this.dgvPartners.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.OliveDrab;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

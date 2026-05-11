@@ -289,15 +289,23 @@ Royalty Amount = 400 × 15% = 60
 
 ---
 
-# Screens Included
+# Screenshots
 
-* Dashboard
-* Author Management
-* Book Management
-* Format Management
-* Order Processing
-* Royalty Reports
+| Dashboard | Authors |
+|---|---|
+| ![](Assets/Dashboard.png) | ![](Assets/Authors.png) |
 
+| Books | Orders |
+|---|---|
+| ![](Assets/books.png) | ![](Assets/orders.png) |
+
+| Partners | Report |
+|---|---|
+| ![](Assets/partners.png) | ![](Assets/report.png) |
+
+| ERD | Assignment |
+|---|---|
+| ![](Assets/ERD.png) | ![](Assets/assignment.png) |
 ---
 
 # Future Improvements
