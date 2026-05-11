@@ -199,17 +199,30 @@ Boutique_Publisher/
 
 # How to Run the Project
 
+## Requirements
+
+Before running the project, make sure you have installed:
+
+* Visual Studio
+* .NET Framework
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+
+---
+
 ## 1. Clone the Repository
 
 ```bash
 git clone <repository-link>
 ```
 
+Or download the project as ZIP and extract it.
+
 ---
 
-## 2. Open the Project
+## 2. Open the Solution
 
-Open the solution file in Visual Studio:
+Open the following file using Visual Studio:
 
 ```text
 Boutique_Publisher.sln
@@ -219,13 +232,15 @@ Boutique_Publisher.sln
 
 ## 3. Create the Database
 
-Open SQL Server Management Studio and execute the provided SQL script:
+Open SQL Server Management Studio (SSMS).
+
+Then open and execute:
 
 ```text
-\Boutique_Publisher-DB-Project\SQL Database\Boutique_Publisher.sql
+Boutique_Publisher.sql
 ```
 
-This script will:
+The script will automatically:
 
 * Create the database
 * Create all tables
@@ -234,15 +249,15 @@ This script will:
 
 ---
 
-## 4. Configure the Connection String
+## 4. Configure SQL Server Connection
 
 Open:
 
+```text
+App.config
+```
 
-App.config 
-
-
-Update the SQL Server instance name if needed:
+Update the SQL Server instance if needed:
 
 ```xml
 <connectionStrings>
@@ -252,12 +267,22 @@ Update the SQL Server instance name if needed:
 </connectionStrings>
 ```
 
- DataBaseHelper.cs
+Also open:
 
-```xml
- public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
+```text
+DatabaseHelper.cs
 ```
-### Important
+
+Update:
+
+```csharp
+public static string ConnectionString =
+"Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
+```
+
+---
+
+## 5. SQL Server Instance Examples
 
 Replace:
 
@@ -265,7 +290,7 @@ Replace:
 .\SQLEXPRESS
 ```
 
-with your SQL Server instance if different.
+with your actual SQL Server instance if different.
 
 Examples:
 
@@ -273,13 +298,29 @@ Examples:
 DESKTOP-XXXX\SQLEXPRESS
 localhost
 .
+MSSQLLocalDB
 ```
 
 ---
 
-## 5. Build the Project
+## 6. Restore Database Connection
 
-In Visual Studio:
+If the application cannot connect:
+
+* Open SQL Server Configuration Manager
+* Enable SQL Server services
+* Make sure SQL Server Authentication is enabled
+* Verify the database name is:
+
+```text
+BoutiquePublisherDB
+```
+
+---
+
+## 7. Build the Project
+
+Inside Visual Studio:
 
 ```text
 Build → Build Solution
@@ -293,7 +334,7 @@ Ctrl + Shift + B
 
 ---
 
-## 6. Run the Application
+## 8. Run the Application
 
 Press:
 
@@ -301,7 +342,7 @@ Press:
 F5
 ```
 
-or:
+or click:
 
 ```text
 Start Debugging
@@ -309,7 +350,7 @@ Start Debugging
 
 ---
 
-# Sample Workflow
+## 9. Application Workflow
 
 1. Add Authors
 2. Add Books
@@ -317,8 +358,9 @@ Start Debugging
 4. Add Book Formats
 5. Add Retail Partners
 6. Process Orders
-7. Open Royalty Reports
-8. View Dashboard Statistics
+7. Search Books
+8. Generate Royalty Reports
+9. View Dashboard Statistics
 
 ---
 
