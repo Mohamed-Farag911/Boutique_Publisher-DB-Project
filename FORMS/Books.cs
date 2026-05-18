@@ -20,13 +20,13 @@ namespace Boutique_Publisher
 
         private void Books_Load(object sender, EventArgs e)
         {
-            // Genre ComboBox Setup
+           
             cmbGenre.Items.AddRange(new string[] { "Fantasy", "Horror", "Romance", "Drama", "Science Fiction" });
 
-            // Target Age Group ComboBox Setup
+       
             cmbTargetAge.Items.AddRange(new string[] { "Kids", "Teens", "Adults" });
 
-            // Optional: Load data automatically on start
+            
             // LoadBooks(); 
         }
 

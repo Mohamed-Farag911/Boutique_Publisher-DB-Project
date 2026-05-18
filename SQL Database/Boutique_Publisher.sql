@@ -1,20 +1,19 @@
 /*==============================================================*/
-/* DBMS name:      Microsoft SQL Server 2012+                   */
-/* Description:    Realistic Schema for WinForms .NET App       */
+/* DBMS name:      Microsoft SQL Server 2012                    */
+/* Created on:     08/05/2026 12:02:35 AM                       */
 /*==============================================================*/
 
 
+
 -- ============================================================
--- 1. CREATE NEW DATABASE
+--  CREATE NEW DATABASE
 -- ============================================================
 CREATE DATABASE BoutiquePublisherDB;
 GO
 
 USE BoutiquePublisherDB;
 GO
--- ============================================================
--- 2. CREATE NEW TABLES (STRICTLY MATCHING ERD)
--- ============================================================
+
 
 /*==============================================================*/
 /* Table: AUTHOR                                                */
@@ -57,8 +56,8 @@ CREATE TABLE FORMAT (
    FORMAT_ID            INT                  IDENTITY(1,1) NOT NULL,
    ISBN                 NVARCHAR(30)         NOT NULL,
    FORMAT_TYPE          NVARCHAR(50)         NULL,
-   PRODUCTION_COST      DECIMAL(10,2)        NULL, -- Changed from (10,10) to prevent arithmetic overflow
-   RETAIL_PRICE         DECIMAL(10,2)        NULL, -- Changed from (10,10) to prevent arithmetic overflow
+   PRODUCTION_COST      DECIMAL(10,2)        NULL,
+   RETAIL_PRICE         DECIMAL(10,2)        NULL,
    CONSTRAINT PK_FORMAT PRIMARY KEY CLUSTERED (FORMAT_ID)
 )
 GO
@@ -80,14 +79,14 @@ CREATE TABLE [ORDER] (
    ORDER_ID             INT                  IDENTITY(1,1) NOT NULL,
    FORMAT_ID            INT                  NOT NULL,
    PARTNER_ID           INT                  NOT NULL,
-   ORDER_DATE           DATETIME             NULL, -- Matches Date & Time in ERD
+   ORDER_DATE           DATETIME             NULL, 
    QUANTITY             INT                  NOT NULL,
    CONSTRAINT PK_ORDER PRIMARY KEY CLUSTERED (ORDER_ID)
 )
 GO
 
 -- ============================================================
--- 3. ADD FOREIGN KEY CONSTRAINTS
+--  ADD FOREIGN KEY CONSTRAINTS
 -- ============================================================
 
 ALTER TABLE AUTHOR_BOOK

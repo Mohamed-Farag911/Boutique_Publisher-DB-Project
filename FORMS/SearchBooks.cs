@@ -47,10 +47,10 @@ namespace Boutique_Publisher
                         B.TITLE,
                         B.GENRE,
                         B.TARGETAGEGROUP,
-                        A.NAME AS AuthorName,
+                        A.NAME AS AuthorName, 
                         F.FORMAT_TYPE
                     FROM BOOK B
-                    LEFT JOIN AUTHOR_BOOK AB
+                    LEFT JOIN AUTHOR_BOOK AB 
                         ON B.ISBN = AB.ISBN
                     LEFT JOIN AUTHOR A
                         ON AB.AUTHOR_ID = A.AUTHOR_ID

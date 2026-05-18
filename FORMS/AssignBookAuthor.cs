@@ -127,7 +127,7 @@ namespace Boutique_Publisher
                 {
                     con.Open();
 
-                    // 1. Prevent Duplicate
+                    //Prevent Duplicate
                     string checkQuery = "SELECT COUNT(*) FROM AUTHOR_BOOK WHERE AUTHOR_ID=@A_ID AND ISBN=@ISBN";
                     SqlCommand checkCmd = new SqlCommand(checkQuery, con);
                     checkCmd.Parameters.AddWithValue("@A_ID", cmbAuthor.SelectedValue);
@@ -139,7 +139,7 @@ namespace Boutique_Publisher
                         return;
                     }
 
-                    // 2. Insert
+                    //Insert
                     string insertQuery = "INSERT INTO AUTHOR_BOOK (AUTHOR_ID, ISBN) VALUES (@A_ID, @ISBN)";
                     SqlCommand cmd = new SqlCommand(insertQuery, con);
                     cmd.Parameters.AddWithValue("@A_ID", cmbAuthor.SelectedValue);
@@ -167,7 +167,7 @@ namespace Boutique_Publisher
             {
                 string oldISBN = dgvAssignments.CurrentRow.Cells["ISBN"].Value.ToString();
                 int oldAuthorID = Convert.ToInt32(dgvAssignments.CurrentRow.Cells["AUTHOR_ID"].Value);
-
+               
                 using (SqlConnection con = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
                     con.Open();
@@ -222,9 +222,7 @@ namespace Boutique_Publisher
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        // =========================================
-        // UTILITIES
-        // =========================================
+       
 
         private void ClearFields()
         {

@@ -12,15 +12,5 @@ namespace Boutique_Publisher
     {
         public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
 
-        public static DataTable GetTable(string query)
-        {
-            using (SqlConnection conn = new SqlConnection(ConnectionString))
-            {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                return dt;
-            }
-        }
     }
 }

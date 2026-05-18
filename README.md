@@ -1,382 +1,161 @@
-# Boutique Publisher Management System
-
-## Overview
-
-Boutique Publisher Management System is a Windows Forms desktop application developed using C#, .NET Framework, and Microsoft SQL Server.
-
-The system is designed to help publishing companies manage:
-
-* Authors
-* Books
-* Book Formats
-* Retail Partners
-* Orders
-* Author Royalties
-* Sales Reports
-
-The project demonstrates database design, relational database implementation, CRUD operations, business logic processing, and dashboard/report generation.
-
+# 📚 Boutique Publisher — Desktop Database Application
+ 
+A Windows Forms desktop application built with **C# (.NET Framework 4.7.2)** and **Microsoft SQL Server** for managing a boutique publishing company. The system handles authors, books, formats, retail partners, orders, and royalty reporting through a clean, database-driven UI.
+ 
 ---
-
-# Screenshots
-
-## Dashboard
-
-<p align="center">
-  <img src="Assets/Dashboard.png" width="900"/>
-</p>
-
+ 
+## 📸 Screenshots
+ 
+| Dashboard | Authors |
+|-----------|---------|
+| ![Dashboard](Assets/Dashboard.png) | ![Authors](Assets/Authors.png) |
+ 
+| Books | Book Search |
+|-------|------------|
+| ![Books](Assets/books.png) | ![Search](Assets/search.png) |
+ 
+| Formats | Retail Partners |
+|---------|----------------|
+| ![Formats](Assets/formats.png) | ![Partners](Assets/partners.png) |
+ 
+| Process Orders | Royalty Report |
+|---------------|----------------|
+| ![Orders](Assets/orders.png) | ![Report](Assets/report.png) |
+ 
 ---
-
-## Entity Relationship Diagram (ERD)
-
-<p align="center">
-  <img src="Assets/ERD.png" width="700"/>
-</p>
-
+ 
+## 🗂️ Entity Relationship Diagram
+ 
+![ERD](Assets/ERD.png)
+ 
 ---
-
-| Authors | Books |
-|---|---|
-| ![](Assets/Authors.png) | ![](Assets/books.png) |
-
-| Formats | Search Books |
-|---|---|
-| ![](Assets/formats.png) | ![](Assets/search.png) |
-
-| Orders | Partners |
-|---|---|
-| ![](Assets/orders.png) | ![](Assets/partners.png) |
-
-| Report | Assignment |
-|---|---|
-| ![](Assets/report.png) | ![](Assets/assignment.png) |
-
-# Technologies Used
-
-* C#
-* Windows Forms (.NET)
-* Microsoft SQL Server
-* ADO.NET
-* Visual Studio
-
+ 
+## ✨ Features
+ 
+- **Dashboard** — Live statistics (total authors, books, orders, partners) with a real-time clock and a database reset option
+- **Author Management** — Add, update, delete, and browse authors with royalty percentage tracking
+- **Book Management** — CRUD operations on books with genre (Fantasy, Horror, Romance, Drama, Sci-Fi) and target age group (Kids, Teens, Adults)
+- **Format Management** — Manage book formats (e.g. Hardcover, Paperback, eBook) with production cost and retail price
+- **Author–Book Assignment** — Link multiple authors to multiple books (many-to-many relationship)
+- **Retail Partners** — Manage partner stores that place orders
+- **Process Orders** — Place orders by selecting a partner, book format, and quantity; auto-calculates total price
+- **Search Books** — Filter books by Title, ISBN, Genre, Author, or Format across all records
+- **Royalty Report** — Aggregated report showing total sales and royalty amounts owed per author per book, sorted by highest royalty
 ---
-
-# Features
-
-## Author Management
-
-* Add new authors
-* Update author information
-* Delete authors
-* View authors
-* Store biography and royalty percentage
-
-## Book Management
-
-* Add books
-* Update books
-* Delete books
-* Search books
-* Display all books
-* Advanced book search using:
-  * Title
-  * Genre
-  * ISBN
-  * Author Name
-  * Release Format
-
-## Author Assignment
-
-* Assign one or multiple authors to books
-* Support co-authorship
-* Display author-book relationships
-
-
-
-## Format Management
-
-* Add multiple formats for books:
-
-  * Hardcover
-  * Paperback
-  * Ebook
-  * Audiobook
-* Store production cost and retail price
-
-## Retail Partner Management
-
-* Add retail partners
-* Update retail partner information
-* Delete retail partners
-* View all partners
-
-## Order Processing
-
-* Process book orders
-* Automatically calculate:
-
-  * Retail price
-  * Total price
-* Automatically store order date and time
-
-## Royalty Report
-
-* Automatically calculate royalties based on:
-
-```text
-Retail Price × Quantity × Royalty Percentage
-```
-
-* Display:
-
-  * Total Sales
-  * Quantity Sold
-  * Royalty Percentage
-  * Royalty Amount
-
-## Dashboard
-
-* Total Books
-* Total Authors
-* Total Orders
-* Total Partners
-* Navigation between forms
-
+ 
+## 🗄️ Database Schema
+ 
+The application uses a SQL Server database named `BoutiquePublisherDB` with the following tables:
+ 
+| Table | Description |
+|-------|-------------|
+| `AUTHOR` | Author ID, Name, Biography, Royalty % |
+| `BOOK` | ISBN (PK), Title, Genre, Target Age Group |
+| `AUTHOR_BOOK` | Junction table linking authors to books (many-to-many) |
+| `FORMAT` | Format ID, ISBN (FK), Format Type, Production Cost, Retail Price |
+| `RETAILPARTNER` | Partner ID, Partner Name |
+| `ORDER` | Order ID, Format ID (FK), Partner ID (FK), Order Date, Quantity |
+ 
+Foreign keys use `ON DELETE CASCADE` so removing a book or author automatically cleans up related records.
+ 
 ---
-
-# Database Structure
-
-## Main Tables
-
-* AUTHOR
-* BOOK
-* AUTHOR_BOOK
-* FORMAT
-* RETAILPARTNER
-* ORDER
-
+ 
+## 🛠️ Prerequisites
+ 
+- **Windows** (10 or later recommended)
+- **Visual Studio 2022** (or later)
+- **SQL Server Express** (or any SQL Server edition)
+- **.NET Framework 4.7.2**
 ---
-
-# Entity Relationships
-
-* One Author can write many Books
-* One Book can have many Authors
-* One Book can have many Formats
-* One Retail Partner can process many Orders
-* One Format can appear in many Orders
-
----
-
-# Project Structure
-
-```text
-Boutique_Publisher/
-│
-├── Dashboard.cs
-├── Author.cs
-├── Books.cs
-├── Formats.cs
-├── RetailPartners.cs
-├── ProcessOrder.cs
-├── AssignBookAuthor.cs
-├── RoyaltyReport.cs
-├── DatabaseHelper.cs
-├── App.config
-└── BoutiquePublisherDB.sql
-```
-
----
-
-# How to Run the Project
-
-## Requirements
-
-Before running the project, make sure you have installed:
-
-* Visual Studio
-* .NET Framework
-* Microsoft SQL Server
-* SQL Server Management Studio (SSMS)
-
----
-
-## 1. Clone the Repository
-
+ 
+## 🚀 Getting Started
+ 
+### 1. Clone the repository
+ 
 ```bash
-git clone <repository-link>
+git clone https://github.com/your-username/Boutique_Publisher-DB-Project.git
+cd Boutique_Publisher-DB-Project
 ```
-
-Or download the project as ZIP and extract it.
-
----
-
-## 2. Open the Solution
-
-Open the following file using Visual Studio:
-
-```text
-Boutique_Publisher.sln
+ 
+### 2. Set up the database
+ 
+Open **SQL Server Management Studio (SSMS)** and run the setup script:
+ 
 ```
-
----
-
-## 3. Create the Database
-
-Open SQL Server Management Studio (SSMS).
-
-Then open and execute:
-
-```text
-Boutique_Publisher.sql
+SQL Database/Boutique_Publisher.sql
 ```
-
-The script will automatically:
-
-* Create the database
-* Create all tables
-* Create primary keys
-* Create foreign keys
-
----
-
-## 4. Configure SQL Server Connection
-
-Open:
-
-```text
-App.config
-```
-
-Update the SQL Server instance if needed:
-
-```xml
-<connectionStrings>
-  <add name="BoutiquePublisherDB"
-       connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True"
-       providerName="System.Data.SqlClient"/>
-</connectionStrings>
-```
-
-Also open:
-
-```text
-DatabaseHelper.cs
-```
-
-Update:
-
+ 
+This script creates the `BoutiquePublisherDB` database and all tables with the correct constraints.
+ 
+### 3. Configure the connection string
+ 
+The connection string is defined in `DataBase/DataBaseHelper.cs`:
+ 
 ```csharp
 public static string ConnectionString =
-"Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
+    "Data Source=.\\SQLEXPRESS;Initial Catalog=BoutiquePublisherDB;Integrated Security=True";
 ```
-
+ 
+If your SQL Server instance has a different name, update `Data Source` accordingly (e.g., `.\SQLSERVER2019` or a named server).
+ 
+### 4. Build and run
+ 
+Open `Boutique_Publisher.slnx` in Visual Studio, build the solution (`Ctrl+Shift+B`), and press **F5** to run.
+ 
 ---
-
-## 5. SQL Server Instance Examples
-
-Replace:
-
-```text
-.\SQLEXPRESS
+ 
+## 📁 Project Structure
+ 
 ```
-
-with your actual SQL Server instance if different.
-
-Examples:
-
-```text
-DESKTOP-XXXX\SQLEXPRESS
-localhost
-.
-MSSQLLocalDB
+Boutique_Publisher-DB-Project/
+├── Assets/                          # Screenshots and ERD diagram
+├── config/
+│   └── App.config                   # Application configuration
+├── DataBase/
+│   └── DataBaseHelper.cs            # Shared connection string
+├── FORMS/
+│   ├── Dashboard.cs                 # Main hub with live stats
+│   ├── Author.cs                    # Author CRUD
+│   ├── Books.cs                     # Book CRUD
+│   ├── Formats.cs                   # Format CRUD
+│   ├── AssignBookAuthor.cs          # Author–Book assignment
+│   ├── RetailPartners.cs            # Retail partner CRUD
+│   ├── ProcessOrder.cs              # Order processing
+│   ├── SearchBooks.cs               # Multi-filter book search
+│   └── RoyaltyReport.cs             # Aggregated royalty report
+├── ICONS/                           # UI icon assets
+├── Properties/                      # Assembly & resource files
+├── Resources/                       # Embedded resources
+├── SQL Database/
+│   └── Boutique_Publisher.sql       # Full DB creation script
+├── BoutiquePublisherDBDataSet.xsd   # Typed DataSet schema
+├── Program.cs                       # Application entry point
+└── Boutique_Publisher.csproj        # Project file
 ```
-
+ 
 ---
-
-## 6. Restore Database Connection
-
-If the application cannot connect:
-
-* Open SQL Server Configuration Manager
-* Enable SQL Server services
-* Make sure SQL Server Authentication is enabled
-* Verify the database name is:
-
-```text
-BoutiquePublisherDB
-```
-
+ 
+## 🧰 Tech Stack
+ 
+| Layer | Technology |
+|-------|-----------|
+| Language | C# |
+| Framework | .NET Framework 4.7.2 |
+| UI | Windows Forms (WinForms) |
+| Database | Microsoft SQL Server (SQL Express) |
+| Data Access | ADO.NET (`SqlConnection`, `SqlCommand`, `SqlDataAdapter`) |
+| IDE | Visual Studio 2022 |
+ 
 ---
-
-## 7. Build the Project
-
-Inside Visual Studio:
-
-```text
-Build → Build Solution
-```
-
-Shortcut:
-
-```text
-Ctrl + Shift + B
-```
-
+ 
+## 📋 Usage Notes
+ 
+- **Royalty Report** calculates earnings as: `Retail Price × Quantity Sold × (Royalty % / 100)`
+- The **Dashboard reset button** clears all data from every table and reseeds identity columns — use with caution
+- Orders are linked to a specific **format** (not just a book), so pricing is determined per edition
+- The search form supports partial matching (`LIKE %keyword%`) across all fields simultaneously when "All" filter is selected
 ---
-
-## 8. Run the Application
-
-Press:
-
-```text
-F5
-```
-
-or click:
-
-```text
-Start Debugging
-```
-
----
-
-## 9. Application Workflow
-
-1. Add Authors
-2. Add Books
-3. Assign Authors to Books
-4. Add Book Formats
-5. Add Retail Partners
-6. Process Orders
-7. Search Books
-8. Generate Royalty Reports
-9. View Dashboard Statistics
-
----
-
-# Royalty Calculation Example
-
-## Example
-
-* Retail Price = 40
-* Quantity = 10
-* Royalty Percentage = 15%
-
-## Calculations
-
-```text
-Total Sales = 40 × 10 = 400
-
-Royalty Amount = 400 × 15% = 60
-```
-
-
-
-
-
----
-
-# License
-
-This project is developed for educational purposes.
+ 
+## 📄 License
+ 
+This project is for educational purposes. Feel free to fork and build upon it.
