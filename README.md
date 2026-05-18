@@ -1,5 +1,11 @@
 # 📚 Boutique Publisher — Desktop Database Application
  
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![.NET Framework](https://img.shields.io/badge/.NET_4.7.2-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Windows Forms](https://img.shields.io/badge/Windows_Forms-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white)
+ 
 A Windows Forms desktop application built with **C# (.NET Framework 4.7.2)** and **Microsoft SQL Server** for managing a boutique publishing company. The system handles authors, books, formats, retail partners, orders, and royalty reporting through a clean, database-driven UI.
  
 ---
